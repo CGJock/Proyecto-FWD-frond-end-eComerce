@@ -1,211 +1,28 @@
 {
   "dataUser1": [
     {
-      "user": "sdn",
-      "mail": "@mail.com",
-      "password": "sfs",
-      "id": "1c4e"
-    },
-    {
-      "id": "c2b8",
-      "user": "@mail.com",
-      "password": "user",
-      "mail": "1234"
-    },
-    {
       "id": "3d35",
       "user": "pedro",
       "password": "@mail.com",
       "mail": "1234"
     },
     {
-      "id": "9740",
-      "user": "pedro",
-      "password": "@mail.com",
+      "id": "243b",
+      "user": "newuser",
+      "password": "@newuser.com",
       "mail": "1234"
     },
     {
-      "id": "13ea",
-      "user": "nuevo",
-      "password": "@mail.com",
-      "mail": "1234"
-    },
-    {
-      "id": "a98f",
-      "user": "nuevo2",
+      "id": "5dfd",
+      "user": "user3",
       "password": "1234",
-      "mail": "@mail.com"
+      "mail": "user3@mail.com"
     },
     {
-      "id": "fc27",
-      "user": "cat",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "e4d3",
+      "id": "c8f9",
       "user": "pedro",
-      "password": "1234",
+      "password": "123",
       "mail": "@mail.com"
-    },
-    {
-      "id": "f85d",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "7b07",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "48df",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "381d",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "01c4",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "57d9",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "b08a",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "e93b",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "c03b",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "98d5",
-      "user": "pedro",
-      "password": "1234",
-      "mail": "@mail.com"
-    },
-    {
-      "id": "59a6",
-      "user": "camote",
-      "password": "1234",
-      "mail": "camote@mail.com"
-    },
-    {
-      "id": "c415",
-      "user": "prueba",
-      "password": "1234",
-      "mail": "prueba@mail.com"
-    },
-    {
-      "id": "504d",
-      "user": "prueba",
-      "password": "1234",
-      "mail": "prueba@mail.com"
-    },
-    {
-      "id": "2139",
-      "user": "prueba",
-      "password": "1234",
-      "mail": "prueba@mail.com"
-    },
-    {
-      "id": "6bb2",
-      "user": "prueba",
-      "password": "1234",
-      "mail": "prueba@mail.com"
-    },
-    {
-      "id": "0e68",
-      "user": "user2",
-      "password": "1234",
-      "mail": "user2@mail.com"
-    },
-    {
-      "id": "2d9c",
-      "user": "user2",
-      "password": "1234",
-      "mail": "user2@mail.com"
-    },
-    {
-      "id": "e134"
-    },
-    {
-      "id": "9cad"
-    },
-    {
-      "id": "1832"
-    },
-    {
-      "id": "5e4c"
-    },
-    {
-      "id": "d0ad"
-    },
-    {
-      "id": "0adb",
-      "user": "user",
-      "password": "1234",
-      "mail": "user@mail"
-    },
-    {
-      "id": "a168",
-      "user": "user",
-      "password": "1234",
-      "mail": "user@mail"
-    },
-    {
-      "id": "0522",
-      "user": "memo",
-      "password": "1234",
-      "mail": "memo@mail.com"
-    },
-    {
-      "id": "7041",
-      "user": "memo",
-      "password": "1234",
-      "mail": "memo@mail.com"
-    },
-    {
-      "id": "8a94",
-      "user": "memito",
-      "password": "1234",
-      "mail": "memito@mail.com"
-    },
-    {
-      "id": "46f8"
-    },
-    {
-      "id": "e467"
-    },
-    {
-      "id": "68f0",
-      "user": "",
-      "password": "",
-      "mail": ""
     }
   ],
   "items": [
