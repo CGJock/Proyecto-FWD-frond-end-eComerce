@@ -1,10 +1,10 @@
 import React from 'react'
+import AlignmentExample from '../../components/nav'
 
 function Home() {
   return (
     <>
-    <h1>hola</h1>
-    <div>hola</div>
+    <AlignmentExample/>
     </>
   )
 }
