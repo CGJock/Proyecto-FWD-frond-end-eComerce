@@ -2,6 +2,7 @@ import { useState } from "react"
 import { getTask } from "../services/get";
 import {  useNavigate } from "react-router-dom";
 
+
 const LoginForm = () => {
     const navigate = useNavigate()
     const [User, setUser] = useState("");//se dejan vacios por que es el dato que trae el input
@@ -14,13 +15,15 @@ const LoginForm = () => {
         let usuarioEncontrado = false;
         datos.forEach((e)=> {
         User === e.user && Password === e.password && Password === e.password ?  usuarioEncontrado = true : usuarioEncontrado = false 
-          localStorage.setItem("user", JSON.stringify(e.user))
+        localStorage.setItem("user", JSON.stringify(e.user))
           // Navigate('/',{replace : true} )*no te necesito pero te dejo ahi por si acaso
         });
-        if (usuarioEncontrado) {
+        if (User === "ADMIN") {
           console.log("encontrado");
+          navigate("/Administration")
+        } else if(usuarioEncontrado){
           navigate("/home")
-        } else{
+        }else{
           alert("el usuario seleccionado no existe")
         }
       }

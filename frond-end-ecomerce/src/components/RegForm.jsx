@@ -12,9 +12,15 @@ const Registform = () => {
     const [Password, setPassword] = useState("");
     const [PasswordValidation, setPasswordValidation] = useState("");
     const [ProfileExists, setProfileExists] = useState("");
-    
+    const ReservedUsers = ['ADMIN' ,'ADMINISTRATOR','ADMINISTRATION'];
     async function HandleForm() {
          event.preventDefault()
+         for (let i = 0; i < ReservedUsers.length; i++) {
+            if (User.toUpperCase() === ReservedUsers[i]) {
+               return alert("Nombre de usuario no disponible")
+            }
+            
+         }
          if (!User || !Mail || !MailValidation || !Password || !PasswordValidation) {
             return alert("rellena los espacios")
         } else if (Mail != MailValidation || Password != PasswordValidation) {

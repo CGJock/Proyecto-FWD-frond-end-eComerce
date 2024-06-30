@@ -23,6 +23,18 @@
       "user": "pedro",
       "password": "123",
       "mail": "@mail.com"
+    },
+    {
+      "id": "84ae",
+      "user": "hillary",
+      "password": "1234",
+      "mail": "hillary@mail"
+    },
+    {
+      "id": "3d39",
+      "user": "ADMIN",
+      "password": "@admin.com",
+      "mail": "1234"
     }
   ],
   "items": [
