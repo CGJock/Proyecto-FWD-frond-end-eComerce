@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function SplitVariantExample() {
   return (
     <>
+    <div className='contenedorDropDown'>
       {['Herramientas', 'Electrodomesticos', 'Muebles', 'vestimenta','Linea blanca', 'Celulares','Juguetes','libros' ].map(
         (variant) => (
           <SplitButton className='botones'
@@ -17,8 +18,10 @@ function SplitVariantExample() {
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
           
           </SplitButton>
+          
         ),
       )}
+      </div>
     </>
   );
 }

@@ -19,7 +19,6 @@ const LoginForm = () => {
           // Navigate('/',{replace : true} )*no te necesito pero te dejo ahi por si acaso
         });
         if (User === "ADMIN") {
-          console.log("encontrado");
           navigate("/Administration")
         } else if(usuarioEncontrado){
           navigate("/home")
