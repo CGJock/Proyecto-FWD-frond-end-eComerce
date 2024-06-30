@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProtectedRoutes from './ProtectedRoutes';
 import {Routes, Route} from "react-router-dom";
 import Administration from '../pages/Administrator/Administration';

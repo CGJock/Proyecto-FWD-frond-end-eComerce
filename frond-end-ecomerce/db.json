@@ -40,6 +40,13 @@
   "items": [
     {
       "id": "5e8c"
+    },
+    {
+      "id": "f2cf",
+      "name": "regrigerador",
+      "price": 100000,
+      "category": "lineaBlanca",
+      "location": "puntarenas"
     }
   ]
 }
