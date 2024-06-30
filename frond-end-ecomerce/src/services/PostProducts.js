@@ -1,5 +1,5 @@
 const apiUrl = "http://localhost:3001/items"
-const postProducts = async (name,price,category,location) => {
+const postProducts = async (name,descripton,price,category,location,imgUrl) => {
     try {
           const response = await fetch(apiUrl, {
            method: 'POST',
@@ -8,9 +8,11 @@ const postProducts = async (name,price,category,location) => {
              },
              body: JSON.stringify({
                name: name,
+               descripton: descripton,
                price: price,
                category: category,
-               location: location
+               location: location,
+               imgUrl: imgUrl
        
               })
            });

@@ -47,6 +47,45 @@
       "price": 100000,
       "category": "lineaBlanca",
       "location": "puntarenas"
+    },
+    {
+      "id": "41be",
+      "name": "televisor",
+      "price": 100000,
+      "category": "lineaBlanca",
+      "location": "puntarenas"
+    },
+    {
+      "id": "e243",
+      "name": "radio",
+      "price": 100000,
+      "category": "lineaBlanca",
+      "location": "puntarenas"
+    },
+    {
+      "id": "fe38",
+      "name": "mezcladora",
+      "price": 100000,
+      "category": "herramientas",
+      "location": "puntarenas"
+    },
+    {
+      "id": "bd8a",
+      "name": "mezcladora",
+      "description": "poderosa mezcladora de 3 velocidades",
+      "price": 100000,
+      "category": "herramientas",
+      "location": "puntarenas",
+      "imgUrl": "https://pretal.info/imagenes/P1010335.jpg"
+    },
+    {
+      "id": "c659",
+      "name": "Libro dracula",
+      "description": "Libro dracula edicion de 2002, en perfecto estado",
+      "price": 30,
+      "category": "libros",
+      "location": "san jose",
+      "imgUrl": "https://m.media-amazon.com/images/I/61oPJXXqXGL._SL1000_.jpg"
     }
   ]
 }
