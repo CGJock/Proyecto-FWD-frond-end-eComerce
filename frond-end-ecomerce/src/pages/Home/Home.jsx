@@ -1,8 +1,11 @@
 import React from 'react'
+import AlignmentExample from '../../components/nav'
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+    <AlignmentExample/>
+    </>
   )
 }
 

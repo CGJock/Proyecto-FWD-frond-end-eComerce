@@ -1,5 +1,5 @@
 const apiUrl = "http://localhost:3001/dataUser1"
-const postTask = async (User,Password,Mail) => {
+const postTask = async (User,Mail,Password) => {
     try {
           const response = await fetch(apiUrl, {
            method: 'POST',

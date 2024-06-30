@@ -12,22 +12,32 @@ const Registform = () => {
     const [Password, setPassword] = useState("");
     const [PasswordValidation, setPasswordValidation] = useState("");
     const [ProfileExists, setProfileExists] = useState("");
-    
+    const ReservedUsers = ['ADMIN' ,'ADMINISTRATOR','ADMINISTRATION'];
     async function HandleForm() {
          event.preventDefault()
+         for (let i = 0; i < ReservedUsers.length; i++) {
+            if (User.toUpperCase() === ReservedUsers[i]) {
+               return alert("Nombre de usuario no disponible")
+            }
+            
+         }
          if (!User || !Mail || !MailValidation || !Password || !PasswordValidation) {
-            return alert("rellena los espacios")}
+            return alert("rellena los espacios")
+        } else if (Mail != MailValidation || Password != PasswordValidation) {
+            return alert("los datos no coinciden")
+        }
          let data = await getTask();
         for (const i in data) {
             if (Mail === data[i].mail || User === data[i].user){
-                console.log("el usuario existe")
-               return setProfileExists(true)
+                setProfileExists(true)
+                console.log(ProfileExists)
             }else {
-                return setProfileExists(false)
+                setProfileExists(false)
+                console.log(ProfileExists)
             }
         }
      if(ProfileExists === false){
-                postTask(User,Password,Mail)//se agregan los parametros al post
+                postTask(User,Mail,Password)//se agregan los parametros al post
                 navigate("/Login")
             } else if (ProfileExists === true) {
                 alert("usuario o correo no disponible")
