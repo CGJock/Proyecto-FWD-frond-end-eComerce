@@ -1,0 +1,9 @@
+.cardContainer{
+   margin-left: 200px;
+    background-color: red;
+    width: 800px;
+    height: 800px;
+    gap: 30px;
+    column-gap: 50px;
+    row-gap: 50px;
+}
