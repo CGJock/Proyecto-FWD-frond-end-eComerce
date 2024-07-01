@@ -1,8 +1,10 @@
 
-
+import Asside from "../../components/Asside"
 const Administration = () => {
   return (
-    <div>Administration</div>
+    <div>
+      <Asside/>
+    </div>
   )
 }
 

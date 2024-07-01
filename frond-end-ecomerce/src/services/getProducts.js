@@ -52,15 +52,37 @@
 //       }
 
 //       export default getProducts
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
-const apiUrl = "http://localhost:3001/items";
+// const apiUrl = "http://localhost:3001/items";
 
-function Name() {
+// function Name() {
   
 
-useEffect(() =>{
-  const getProducts  = async() => {
+// useEffect(() =>{
+//   const getProducts  = async() => {
+//     try{
+      
+//       const response = await fetch(apiUrl);
+      
+//       const data = await response.json()
+//       return data
+      
+//     } catch(error){
+//       alert("error en el servidor")
+//     }
+    
+//   }
+//   getProducts()
+// },[]
+// )
+// }
+
+
+//  export default Name
+const apiUrl = "http://localhost:3001/items";
+
+const getItems  = async() => {
     try{
       
       const response = await fetch(apiUrl);
@@ -73,10 +95,5 @@ useEffect(() =>{
     }
     
   }
-  getProducts()
-},[]
-)
-}
 
-
- export default Name
+  export { getItems }

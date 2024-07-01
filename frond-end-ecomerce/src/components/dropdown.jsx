@@ -11,8 +11,8 @@ function SplitVariantExample() {
           <SplitButton className='botones'
             key={variant}
             id={`dropdown-split-variants-${variant}`}
-            variant={variant.toLowerCase()}
-            title={variant}
+            variant={variant}
+            title={variant.toUpperCase()}
           >
             <Dropdown.Item eventKey="1">Action</Dropdown.Item>
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>

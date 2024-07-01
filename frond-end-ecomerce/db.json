@@ -86,6 +86,15 @@
       "category": "libros",
       "location": "san jose",
       "imgUrl": "https://m.media-amazon.com/images/I/61oPJXXqXGL._SL1000_.jpg"
+    },
+    {
+      "id": "c070",
+      "name": "Sillones",
+      "description": "Perfecto estado, sin manchas, beiche, de gamuza",
+      "price": 150,
+      "category": "muebles",
+      "location": "Alajuela",
+      "imgUrl": "https://www.dxxi.com.ar/wp-content/uploads/2016/09/dxxi-sillonr-lounge-web.jpg"
     }
   ]
 }
