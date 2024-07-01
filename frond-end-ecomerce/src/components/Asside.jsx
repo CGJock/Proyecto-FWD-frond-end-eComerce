@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useState } from 'react';
 import { getProducts } from '../services/getProducts'
 
@@ -11,7 +11,7 @@ const Selector = () => {
     return (
     <>
         <button onClick={getItems}>mostrar elementos</button> 
-     
+     <div className='cardContainer'>
      {datos.map((item) =>
         <div key={item.id}>
         <p >articulo: {item.name}</p>
@@ -20,8 +20,9 @@ const Selector = () => {
         <img src={item.imgUrl} alt={item.imgUrl} width="100"/>
         <p>location: {item.location}</p>
         </div>
+        
      )} 
-
+    </div>
     </>
   )
 }

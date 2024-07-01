@@ -1,13 +1,14 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
-import SplitVariantExample from './Dropdown'
 import instagram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
 import telefono from '../assets/telefono.png'
 import correo from '../assets/correo.png'
 import cerrarsesion from '../assets/cerrarsesion.png'
 import perfil from '../assets/perfil.png'
-import banner from '../assets/Banner.png'
+import banner from '../assets/banner.png'
+import Navegacion from '../components/dropdown.jsx'
+
 
 
 
@@ -45,7 +46,7 @@ const Nav = () => {
 
     </div>
     <div>
-        <SplitVariantExample/>
+        <Navegacion/>
     </div>
 
 

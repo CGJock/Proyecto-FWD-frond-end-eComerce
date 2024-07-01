@@ -1,18 +1,35 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useState } from 'react';
-import { getProducts } from '../services/getProducts';
 
-function KitchenSinkExample() {
-    const [datos, setDatos] = useState([]);
-    async function getItems() {
-    const datos = await getProducts()
-    setDatos(datos)
+import { useEffect } from 'react';
+const apiUrl = "http://localhost:3001/items";
+
+
+
+function CardsProducts() {
+   const [Data,setData] = useState([])
+useEffect(() =>{
+    const getProducts  = async() => {
+      try{
+        
+        const response = await fetch(apiUrl);
+        const data = await response.json()
+        setData(data)
+        
+        
+      } catch(error){
+        alert("error en el servidor")
+      }
+      
     }
+    getProducts()
+  },[]
+  )
   return (
     <>
-    <button onClick={getItems}>Mostrar Productos</button>
-    {datos.map((item) =>
+    
+    {Data.map((item) =>
     <Card key={item.id} style={{ width: '18rem' }}>
       <Card.Img variant="top" src={item.imgUrl} />
       <Card.Body>
@@ -36,4 +53,4 @@ function KitchenSinkExample() {
   );
 }
 
-export default KitchenSinkExample;
+export default CardsProducts;
