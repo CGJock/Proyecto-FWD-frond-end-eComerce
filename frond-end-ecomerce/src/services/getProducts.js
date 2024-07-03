@@ -86,8 +86,7 @@ const getItems  = async() => {
     try{
       
       const response = await fetch(apiUrl);
-      
-      const data = await response.json()
+     const data = await response.json()
       return data
       
     } catch(error){

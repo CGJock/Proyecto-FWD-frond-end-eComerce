@@ -1,8 +1,8 @@
 const apiUrl = "http://localhost:3001/items"
-const postProducts = async (name,description,price,category,location,imgUrl) => {
+const putProducts = async (id,name,description,price,category,location,imgUrl) => {
     try {
-          const response = await fetch(apiUrl, {
-           method: 'POST',
+          const response = await fetch(apiUrl + id, {
+           method: 'PUT',
            headers: {
              'Content-Type': 'application/json'
              },
@@ -23,4 +23,4 @@ const postProducts = async (name,description,price,category,location,imgUrl) => 
             alert("error")
            } 
       }
-      export default postProducts
+      export default putProducts
