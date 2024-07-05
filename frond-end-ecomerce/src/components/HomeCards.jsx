@@ -1,9 +1,5 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { useState } from "react";
-import { useEffect } from "react";
-import { getItems } from "../services/getProducts";
-import Asside from "./Asside";
 
 
 const CardsProducts = ({dataFiltrada}) => {

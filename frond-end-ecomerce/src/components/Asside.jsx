@@ -1,5 +1,3 @@
-import { useState } from "react";
-// import { getAllItems } from "../services/getProducts";
 
 
 const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVenta,setPuntoVenta,getAllItems}) => {
@@ -56,9 +54,9 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
       
       <label htmlFor="price">Precio Maximo: </label>
      
-      <input type="range" min={0} max={500000} step={1000} value={Price} onChange={PriceSlider}/>
+      <input type="range" min={0} max={500000} step={5000} value={Price} onChange={PriceSlider}/>
 
-      <p>{Price}</p>
+      <p>Monto:{Price}</p>
       <button onClick={getAllItems}>Busqueda</button>
       
     </>
