@@ -2,7 +2,8 @@
 import AlignmentExample from '../../components/nav'
 import CardProducts from '../../components/HomeCards'
 import Asside from "../../components/Asside"
-import { useState, useEffect } from 'react';
+import SearchBarPrincipal from '../../components/SearchBarPrincipal';
+import { useState, useEffect, useRef } from 'react';
 import { getItems } from '../../services/getProducts';
 
 
@@ -13,6 +14,8 @@ function Home() {
  const [Seleccionado, setSeleccionado] = useState("");
  const [Price, setPrice] = useState("");
  const [puntoVenta, setPuntoVenta] = useState("");
+ const [BusquedaXNombre,setBusquedaXNombre] = useState("");
+ const inputKey = useRef()
 
  useEffect(
   () => {
@@ -33,11 +36,24 @@ async function getAllItems() {
   setdataFiltrada(categ)
 
 }
+async function filtroxNombre(kInput) {
+
+  const data = await getItems();
+
+ const filtroIncludes = data.filter((element) => element.name.includes(kInput));
+  
+  if (filtroIncludes) {
+    setdataFiltrada(filtroIncludes)
+    
+  }
+}
   return (
     <>
     <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
      puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
-    <AlignmentExample/>
+    <AlignmentExample dataFiltrada={dataFiltrada}/>
+    <SearchBarPrincipal inputRef={inputKey} dataFiltrada={dataFiltrada} BusquedaXNombre={BusquedaXNombre} setBusquedaXNombre={setBusquedaXNombre}
+    filtroxNombre={filtroxNombre}/>
     <CardProducts dataFiltrada={dataFiltrada}/>
     </>
   )
