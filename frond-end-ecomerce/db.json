@@ -39,37 +39,6 @@
   ],
   "items": [
     {
-      "id": "5e8c"
-    },
-    {
-      "id": "f2cf",
-      "name": "regrigerador",
-      "price": 100000,
-      "category": "lineaBlanca",
-      "location": "puntarenas"
-    },
-    {
-      "id": "41be",
-      "name": "televisor",
-      "price": 100000,
-      "category": "lineaBlanca",
-      "location": "puntarenas"
-    },
-    {
-      "id": "e243",
-      "name": "radio",
-      "price": 100000,
-      "category": "lineaBlanca",
-      "location": "puntarenas"
-    },
-    {
-      "id": "fe38",
-      "name": "mezcladora",
-      "price": 100000,
-      "category": "herramientas",
-      "location": "puntarenas"
-    },
-    {
       "id": "bd8a",
       "name": "mezcladora",
       "description": "poderosa mezcladora de 3 velocidades",
@@ -95,6 +64,68 @@
       "category": "muebles",
       "location": "Alajuela",
       "imgUrl": "https://www.dxxi.com.ar/wp-content/uploads/2016/09/dxxi-sillonr-lounge-web.jpg"
+    },
+    {
+      "id": "735f",
+      "name": "Libros Harry Potter",
+      "descripton": "Coleccion de libros de harry potter, ano 1995",
+      "price": "85000",
+      "category": "libros",
+      "imgUrl": "https://img.europapress.es/fotoweb/fotonoticia_20170604112334_1200.jpg"
+    },
+    {
+      "id": "ffa5",
+      "name": "machete",
+      "descripton": "pa volarle cuello a los traicioneros",
+      "price": "30000",
+      "category": "herramientas",
+      "location": "puntarenas",
+      "imgUrl": "https://distribuidortruper.mx/wp-content/uploads/2023/08/blade-g364da4609_1280-1.jpg"
+    },
+    {
+      "id": "ac10",
+      "name": "martillo",
+      "descripton": "pa hundirselo en la cabeza a los traidores",
+      "price": "8000",
+      "category": "herramientas",
+      "location": "puntarenas",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUNvo5gjkj0hTOyyXxEOzZ5UhDrhlG9GkfMSQKrNlDhsDbFecGTh0ii269q1WzGJua8oc&usqp=CAU"
+    },
+    {
+      "id": "03b5",
+      "name": "Lampara",
+      "descripton": "Lampara moderna con estilo minimalista",
+      "price": "20.0000",
+      "category": "muebles",
+      "location": "cartago",
+      "imgUrl": "https://luzvintage.es/img/p/1/2/3/3/2/12332.jpg"
+    },
+    {
+      "id": "85b5",
+      "name": "serrucho seminuevo",
+      "description": "en perfecto estado",
+      "price": "40000",
+      "category": "herramientas",
+      "location": "limon",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrL90gbCXzAftt94kHHCCHjO7GKOw2KIm3zQ&s"
+    },
+    {
+      "id": "0383",
+      "name": "Licuadora",
+      "description": "6 meses de uso",
+      "price": "25000",
+      "category": "",
+      "location": "heredia",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkKK7Qbi-hXO20TDMi0FlYTK1L6TYvTWxkg&s"
+    },
+    {
+      "id": "3bb7",
+      "name": "Radio ",
+      "description": "grabadore totalmente nueva ",
+      "price": "12000",
+      "category": "",
+      "location": "heredia",
+      "imgUrl": "https://sony.scene7.com/is/image/sonyglobalsolutions/Boomboxes-product%20finder-desktop%20and%20mobile-Boomboxes-714x439?$productFinder$&fmt=png-alpha"
     }
   ]
 }

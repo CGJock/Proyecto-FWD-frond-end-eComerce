@@ -1,42 +1,66 @@
 import { useState } from "react";
-import { getItems } from "../services/getProducts";
+// import { getAllItems } from "../services/getProducts";
 
 
-const Asside = () => {
- const [seleccionado, setSeleccionado] = useState("")
-  const [Electrodomesticos, setElectrodomesticos] = useState("electrodomesticos");
-  const [Herramientas, setHerramientas] = useState("herramientas");
-  const [Muebles, setMuebles] = useState("muebles");
-  const [Vestimenta, setVestimenta] = useState("vestimenta");
-  const [LineaBlanca, setLineaBlanca] = useState("lineaBlanca");
-  const [Celulares, setCelulares] = useState("celulares");
-  const [Juguetes, setJuguetes] = useState("juguetes");
-  const [Libros, setLibros] = useState("libros");
-  async function getAllItems() {
-   
-    console.log(Muebles)
-    const data = await getItems();
-   console.log(seleccionado);
-  const categ = data.filter(item =>
-    item.category === seleccionado)
-    console.log(categ)
-  }
+const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVenta,setPuntoVenta,getAllItems}) => {
+  let Electrodomesticos = "electrodomesticos";
+  let Herramientas = "herramientas";
+  let Muebles = "muebles";
+  let Vestimenta = "vestimenta";
+  let LineaBlanca = "lineaBlanca";
+  let Celulares = "celulares";
+  let Juguetes = "juguetes";
+  let Libros = "libros";
+  let Alajuela = "alajuela"
+  let Cartago = "cartago"
+  let Guanacaste = "guanacaste"
+  let Heredia = "heredia"
+  let SanJose = "sanjose"
+  let Limon = "limon"
+  let Puntarenas = "puntarenas"
   
   return (
     <>
-      <label htmlFor="cars">Choose a car:</label>
-      
-      <select value={seleccionado} onChange={(event) => setSeleccionado(event.target.value)} name="cars" id="cars" >
+      <label htmlFor="products">Selecciona una categoria:</label>
+
+      <select
+        value={Seleccionado}
+        onChange={(event) => setSeleccionado(event.target.value)}
+        name="products"
+        id="products"
+      >
         <option value={Electrodomesticos}>Electrodomesticos</option>
         <option value={Herramientas}>Herramientas</option>
         <option value={Muebles}>Muebles</option>
-        <option value={Vestimenta} >Vestimenta</option>
+        <option value={Vestimenta}>Vestimenta</option>
         <option value={LineaBlanca}>LineaBlanca</option>
         <option value={Celulares}>Celulares</option>
         <option value={Juguetes}>Juguetes</option>
         <option value={Libros}>Libros</option>
-        </select>
-        <button onClick={getAllItems}>filter</button>
+      </select>
+
+      <select
+        value={PuntoVenta}
+        onChange={(event) => setPuntoVenta(event.target.value)}
+        name="puntoventa"
+        id="puntoventa"
+      >
+        <option value={Alajuela}>Alajuela</option>
+        <option value={Cartago}>Cartago</option>
+        <option value={Guanacaste}>Guanacaste</option>
+        <option value={Heredia}>Heredia</option>
+        <option value={SanJose}>SanJose</option>
+        <option value={Limon}>Limon</option>
+        <option value={Puntarenas}>Puntarenas</option>
+      </select>
+      
+      <label htmlFor="price">Precio Maximo: </label>
+     
+      <input type="range" min={0} max={500000} step={1000} value={Price} onChange={PriceSlider}/>
+
+      <p>{Price}</p>
+      <button onClick={getAllItems}>Busqueda</button>
+      
     </>
   );
 };

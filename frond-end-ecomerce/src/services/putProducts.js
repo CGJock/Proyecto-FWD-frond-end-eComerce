@@ -1,14 +1,14 @@
-const apiUrl = "http://localhost:3001/items"
-const postProducts = async (name,description,price,category,location,imgUrl) => {
+const apiUrl = "http://localhost:3001/items/"
+const putProducts = async (id,name,description,price,category,location,imgUrl) => {
     try {
-          const response = await fetch(apiUrl, {
-           method: 'POST',
+          const response = await fetch(apiUrl + id, {
+           method: 'PUT',
            headers: {
              'Content-Type': 'application/json'
              },
              body: JSON.stringify({
                name: name,
-               description: description,
+               descripton: description,
                price: price,
                category: category,
                location: location,
@@ -17,10 +17,10 @@ const postProducts = async (name,description,price,category,location,imgUrl) => 
               })
            });
            const data = await response.json()
-          
-           alert("se agrego con exito")
+          alert("agregdo con exito")
+           
          } catch(error) {
             alert("error")
            } 
       }
-      export default postProducts
+      export default putProducts

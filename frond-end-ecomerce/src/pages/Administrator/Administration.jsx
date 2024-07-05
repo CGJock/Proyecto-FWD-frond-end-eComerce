@@ -1,9 +1,14 @@
 
-import Asside from "../../components/Asside"
+import AdminForm from "../../components/AdminForm"
+import InputForm from "../../components/inputForm"
+
 const Administration = () => {
   return (
     <div>
-      <Asside/>
+      
+      <InputForm/>
+      
+      
     </div>
   )
 }

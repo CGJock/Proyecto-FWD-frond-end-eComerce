@@ -3,7 +3,11 @@ import { getTask } from "../services/get";
 import {  useNavigate } from "react-router-dom";
 
 
+
 const LoginForm = () => {
+  // const {data, updateData} = useTheContext()
+
+  // updateData(data + 1)
     const navigate = useNavigate()
     const [User, setUser] = useState("");//se dejan vacios por que es el dato que trae el input
     const [Password, setPassword] = useState("");
