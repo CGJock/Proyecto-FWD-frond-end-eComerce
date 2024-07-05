@@ -31,11 +31,19 @@ const AdminForm = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [Name, setName] = useState("");
   const [Description, setDescription] = useState("");
+  const [Data,setData] = ([])
   const [SelectLocationVisb,setSelectLocationVisb] = useState(false)
   const [SelectCatVisib , setSelectCatVisib ] = useState(false)
   
-  const [Data, setData] = useState([]);
-
+  
+  function setVisibility() {
+    if (!SelectLocationVisb) {
+      setSelectLocationVisb(true)
+      setSelectCatVisib(true)
+    }
+    
+   
+  }
   async function getData() {
     const items = await getItems();
     setData(items);
@@ -64,14 +72,6 @@ const AdminForm = () => {
     },
     [],
   );
-  function setVisibility() {
-    if (!SelectLocationVisb) {
-      setSelectLocationVisb(true)
-      setSelectCatVisib(true)
-    }
-    
-   
-  }
 
 
 async function insertProducts() {
@@ -89,80 +89,9 @@ async function insertProducts() {
 
 }
 
-// async function eliminar() {
-//  delProducts()
-// }
+
   return (
     <>
-      <input
-        className="inpPost"
-        type="text"
-        placeholder="URL de la Imagen"
-        value={imageUrl}
-        onChange={handleInputChange}
-      />
-      <div>
-        <img className="imgPost" src={imageUrl} alt="Imagen" />
-      </div>
-
-      <input
-        type="text"
-        value={Name}
-        placeholder="Precio"
-        onChange={(event) => setName(event.target.value)}
-      />
-
-      <textarea
-        value={Description}
-        onChange={(event) => setDescription(event.target.value)}
-      ></textarea>
-
-      <label htmlFor="products">Selecciona una categoria:</label>
-
-      <select
-        value={Category}
-        onChange={(event) => setCategory(event.target.value)}
-        name="products"
-        id="products"
-      >
-        <option value={Electrodomesticos}>Electrodomesticos</option>
-        <option value={Herramientas}>Herramientas</option>
-        <option value={Muebles}>Muebles</option>
-        <option value={Vestimenta}>Vestimenta</option>
-        <option value={LineaBlanca}>LineaBlanca</option>
-        <option value={Celulares}>Celulares</option>
-        <option value={Juguetes}>Juguetes</option>
-        <option value={Libros}>Libros</option>
-      </select>
-
-      <label htmlFor="PuntoVenta">Punto Venta:</label>
-      <select
-        value={Location}
-        onChange={(event) => setLocation(event.target.value)}
-        name="puntoventa"
-        id="puntoventa"
-      >
-        <option value={Alajuela}>Alajuela</option>
-        <option value={Cartago}>Cartago</option>
-        <option value={Guanacaste}>Guanacaste</option>
-        <option value={Heredia}>Heredia</option>
-        <option value={SanJose}>SanJose</option>
-        <option value={Limon}>Limon</option>
-        <option value={Puntarenas}>Puntarenas</option>
-      </select>
-
-      <label htmlFor="price">Precio: </label>
-
-      <input
-        value={Price}
-        onChange={(event) => setPrice(event.target.value.trim())}
-        id="digito"
-        type="number"
-        placeholder="Precio"
-      ></input>
-      <button onClick={getAllItems}>Busqueda</button>
-
-
       <table className={styles.table}>
         <thead>
       <tr>
@@ -179,7 +108,7 @@ async function insertProducts() {
       {Data.map((item) => (
         
        
-          <tr key={item.id}>
+          <tr key={item.id} style={{border: "solid black 2px"}}>
             <td>{item.name}</td>
             <td>
               {item.description}
@@ -190,7 +119,7 @@ async function insertProducts() {
             </td>
             <td>{item.price}</td>
             <td>
-              {item.Category}{" "}
+              {item.Category}
               <select key={item.id
 
               } style={{display: SelectCatVisib ? "block" : "none"}}

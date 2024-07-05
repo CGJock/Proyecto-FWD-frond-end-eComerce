@@ -39,27 +39,6 @@
   ],
   "items": [
     {
-      "id": "41be",
-      "name": "televisor",
-      "price": 100000,
-      "category": "lineaBlanca",
-      "location": "puntarenas"
-    },
-    {
-      "id": "e243",
-      "name": "radio",
-      "price": 100000,
-      "category": "lineaBlanca",
-      "location": "puntarenas"
-    },
-    {
-      "id": "fe38",
-      "name": "mezcladora",
-      "price": 100000,
-      "category": "herramientas",
-      "location": "puntarenas"
-    },
-    {
       "id": "bd8a",
       "name": "mezcladora",
       "description": "poderosa mezcladora de 3 velocidades",
@@ -113,22 +92,40 @@
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUNvo5gjkj0hTOyyXxEOzZ5UhDrhlG9GkfMSQKrNlDhsDbFecGTh0ii269q1WzGJua8oc&usqp=CAU"
     },
     {
-      "id": "fdef",
-      "name": "",
-      "descripton": "",
-      "price": "",
-      "category": "",
-      "location": "",
-      "imgUrl": ""
+      "id": "03b5",
+      "name": "Lampara",
+      "descripton": "Lampara moderna con estilo minimalista",
+      "price": "20.0000",
+      "category": "muebles",
+      "location": "cartago",
+      "imgUrl": "https://luzvintage.es/img/p/1/2/3/3/2/12332.jpg"
     },
     {
-      "id": "3782",
-      "name": "",
-      "descripton": "",
-      "price": "",
+      "id": "85b5",
+      "name": "serrucho seminuevo",
+      "description": "en perfecto estado",
+      "price": "40000",
+      "category": "herramientas",
+      "location": "limon",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrL90gbCXzAftt94kHHCCHjO7GKOw2KIm3zQ&s"
+    },
+    {
+      "id": "0383",
+      "name": "Licuadora",
+      "description": "6 meses de uso",
+      "price": "25000",
       "category": "",
-      "location": "",
-      "imgUrl": ""
+      "location": "heredia",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkKK7Qbi-hXO20TDMi0FlYTK1L6TYvTWxkg&s"
+    },
+    {
+      "id": "3bb7",
+      "name": "Radio ",
+      "description": "grabadore totalmente nueva ",
+      "price": "12000",
+      "category": "",
+      "location": "heredia",
+      "imgUrl": "https://sony.scene7.com/is/image/sonyglobalsolutions/Boomboxes-product%20finder-desktop%20and%20mobile-Boomboxes-714x439?$productFinder$&fmt=png-alpha"
     }
   ]
 }

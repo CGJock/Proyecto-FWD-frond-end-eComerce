@@ -1,3 +1,4 @@
+
 const apiUrl = "http://localhost:3001/items/"
 const delProducts = async (id) => {
     
@@ -11,6 +12,8 @@ const delProducts = async (id) => {
            
               })
            });
+           console.log("eliminado con exitp")
+
            
           
            

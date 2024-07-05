@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3001/items"
+const apiUrl = "http://localhost:3001/items/"
 const putProducts = async (id,name,description,price,category,location,imgUrl) => {
     try {
           const response = await fetch(apiUrl + id, {
@@ -17,7 +17,7 @@ const putProducts = async (id,name,description,price,category,location,imgUrl) =
               })
            });
            const data = await response.json()
-          
+          alert("agregdo con exito")
            
          } catch(error) {
             alert("error")

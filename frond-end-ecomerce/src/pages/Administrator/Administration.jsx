@@ -1,9 +1,14 @@
 
 import AdminForm from "../../components/AdminForm"
+import InputForm from "../../components/inputForm"
+
 const Administration = () => {
   return (
     <div>
-      <AdminForm/>
+      
+      <InputForm/>
+      
+      
     </div>
   )
 }

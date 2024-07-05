@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { getItems } from "../services/getProducts";
+// import { getAllItems } from "../services/getProducts";
 
-const Asside = () => {
+
+const Asside = ({seleccionado,setSeleccionado,Price,setPrice,priceSlider,puntoVenta,setPuntoVenta,getAllItems}) => {
   let Electrodomesticos = "electrodomesticos";
   let Herramientas = "herramientas";
   let Muebles = "muebles";
@@ -10,9 +11,6 @@ const Asside = () => {
   let Celulares = "celulares";
   let Juguetes = "juguetes";
   let Libros = "libros";
-  const [seleccionado, setSeleccionado] = useState("");
-  const [Price, setPrice] = useState("500")
-  const [puntoVenta, setPuntoVenta] =useState("");
   let Alajuela = "alajuela"
   let Cartago = "cartago"
   let Guanacaste = "guanacaste"
@@ -21,19 +19,6 @@ const Asside = () => {
   let Limon = "limon"
   let Puntarenas = "puntarenas"
   
-
-  const priceSlider = (event) => {
-    setPrice(event.target.value);
-  }
-
-  async function getAllItems() {
-    const data = await getItems();
-    console.log(seleccionado);
-    const categ = data.filter((item) => item.category === seleccionado && Price > item.price);
-    console.log(categ);
-    console.log(Price)
-  }
-
   return (
     <>
       <label htmlFor="products">Selecciona una categoria:</label>
@@ -68,10 +53,14 @@ const Asside = () => {
         <option value={Limon}>Limon</option>
         <option value={Puntarenas}>Puntarenas</option>
       </select>
+      
       <label htmlFor="price">Precio Maximo: </label>
-      <p>{Price}</p>
+     
       <input type="range" min={0} max={500000} step={1000} value={Price} onChange={priceSlider}/>
+
+      <p>{Price}</p>
       <button onClick={getAllItems}>Busqueda</button>
+      
     </>
   );
 };

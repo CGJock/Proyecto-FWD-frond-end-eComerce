@@ -8,7 +8,7 @@ const postProducts = async (name,description,price,category,location,imgUrl) => 
              },
              body: JSON.stringify({
                name: name,
-               descripton: description,
+               description: description,
                price: price,
                category: category,
                location: location,
@@ -18,7 +18,7 @@ const postProducts = async (name,description,price,category,location,imgUrl) => 
            });
            const data = await response.json()
           
-           
+           alert("se agrego con exito")
          } catch(error) {
             alert("error")
            } 
