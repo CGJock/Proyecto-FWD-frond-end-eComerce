@@ -2,7 +2,7 @@ import { useState } from "react";
 // import { getAllItems } from "../services/getProducts";
 
 
-const Asside = ({seleccionado,setSeleccionado,Price,setPrice,priceSlider,puntoVenta,setPuntoVenta,getAllItems}) => {
+const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVenta,setPuntoVenta,getAllItems}) => {
   let Electrodomesticos = "electrodomesticos";
   let Herramientas = "herramientas";
   let Muebles = "muebles";
@@ -24,7 +24,7 @@ const Asside = ({seleccionado,setSeleccionado,Price,setPrice,priceSlider,puntoVe
       <label htmlFor="products">Selecciona una categoria:</label>
 
       <select
-        value={seleccionado}
+        value={Seleccionado}
         onChange={(event) => setSeleccionado(event.target.value)}
         name="products"
         id="products"
@@ -40,7 +40,7 @@ const Asside = ({seleccionado,setSeleccionado,Price,setPrice,priceSlider,puntoVe
       </select>
 
       <select
-        value={puntoVenta}
+        value={PuntoVenta}
         onChange={(event) => setPuntoVenta(event.target.value)}
         name="puntoventa"
         id="puntoventa"
@@ -56,7 +56,7 @@ const Asside = ({seleccionado,setSeleccionado,Price,setPrice,priceSlider,puntoVe
       
       <label htmlFor="price">Precio Maximo: </label>
      
-      <input type="range" min={0} max={500000} step={1000} value={Price} onChange={priceSlider}/>
+      <input type="range" min={0} max={500000} step={1000} value={Price} onChange={PriceSlider}/>
 
       <p>{Price}</p>
       <button onClick={getAllItems}>Busqueda</button>

@@ -10,7 +10,7 @@ import { getItems } from '../../services/getProducts';
 
 function Home() {
  const [dataFiltrada, setdataFiltrada] = useState([]);
- const [seleccionado, setseleccionado] = useState("");
+ const [Seleccionado, setSeleccionado] = useState("");
  const [Price, setPrice] = useState("");
  const [puntoVenta, setPuntoVenta] = useState("");
 
@@ -21,21 +21,21 @@ function Home() {
   [] //pero se setea como un array vacion para evitar el enciclamiento
 );
 
-const priceSlider = (event) => {
+const PriceSlider = (event) => {
   setPrice(event.target.value);
 }
 
 async function getAllItems() {
   const data = await getItems();
-  console.log(seleccionado);
-  const categ = data.filter((item) => item.category === seleccionado && Price > item.price);
+  console.log(Seleccionado);
+  const categ = data.filter((item) => item.category === Seleccionado && Price > item.price);
   console.log(categ)
   setdataFiltrada(categ)
 
 }
   return (
     <>
-    <Asside seleccionado={seleccionado}setseleccionado={setseleccionado} Price={Price} setPrice={setPrice} priceSlider={priceSlider}
+    <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
      puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
     <AlignmentExample/>
     <CardProducts dataFiltrada={dataFiltrada}/>
