@@ -10,51 +10,53 @@ import { getItems } from '../../services/getProducts';
 
 
 function Home() {
- const [dataFiltrada, setdataFiltrada] = useState([]);
+ const [dataFiltrada, setdataFiltrada] = useState([]);//data filtrada iniciara como un array vacio al que se le incorporaran elementos
  const [Seleccionado, setSeleccionado] = useState("");
  const [Price, setPrice] = useState("");
  const [puntoVenta, setPuntoVenta] = useState("");
  const [BusquedaXNombre,setBusquedaXNombre] = useState("");
- const inputKey = useRef()
+ const inputKey = useRef();//para operacones logicas que no tienen que ver con render mejor useref
 
  useEffect(
-  () => {
+  () => {//se ven los cambios de la data al filtrar el componente
     getItems().then((dataFiltrada) => setdataFiltrada(dataFiltrada));//con el .then espera el llamado de la data , cosa que no se podia hacer con el try catch
   },
   [] //pero se setea como un array vacion para evitar el enciclamiento
 );
 
-const PriceSlider = (event) => {
+const PriceSlider = (event) => {//setea elvalor del slider
   setPrice(event.target.value);
 }
 
-async function getAllItems() {
+async function getAllItems() {//fucion que trae los datos filtrados,con .filter se emparejan los elementos con las mismas condiciones
   const data = await getItems();
-  console.log(Seleccionado);
   const categ = data.filter((item) => item.category === Seleccionado && Price > item.price);
-  console.log(categ)
   setdataFiltrada(categ)
 
 }
-async function filtroxNombre(kInput) {
+async function filtroxNombre(kInput) {//funcion que filtra los elementos por nombre en tiempo real con search bar
 
-  const data = await getItems();
+  const data = await getItems();//se obtiene la data desde el llamado a la api
 
- const filtroIncludes = data.filter((element) => element.name.includes(kInput));
-  
+ const filtroIncludes = data.filter((element) => element.name.toLowerCase().includes(kInput));
+  //el valor de la data va ser igual a un filtro de los elementos, en este caso nombre, y a cada uno de los elementos
+  //se verifica si incluye kinput que trae el valor del input searchbar
   if (filtroIncludes) {
-    setdataFiltrada(filtroIncludes)
+    setdataFiltrada(filtroIncludes)//si hay datos que cumplen la condicion filtro includes sera la nueva data
     
   }
 }
   return (
     <>
-    <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
-     puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
+   
     <AlignmentExample dataFiltrada={dataFiltrada}/>
     <SearchBarPrincipal inputRef={inputKey} dataFiltrada={dataFiltrada} BusquedaXNombre={BusquedaXNombre} setBusquedaXNombre={setBusquedaXNombre}
     filtroxNombre={filtroxNombre}/>
+    <div style={{display:"flex"}}>
+    <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
+     puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
     <CardProducts dataFiltrada={dataFiltrada}/>
+    </div>
     </>
   )
 }

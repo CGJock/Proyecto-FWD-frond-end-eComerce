@@ -11,16 +11,16 @@ const CardsProducts = ({dataFiltrada}) => {
           display: "grid",
           height: "500px",
           gridTemplateColumns: "200px 200px 200px",
-          gap: "10px",
-          columnGap: "50px",
-          marginLeft: "550px",
+          rowGap:"30px",
+          columnGap: "60px",
+          marginLeft: "60px",
         }}
       >
         {dataFiltrada.map((item) => (
-          <Card key={item.id} style={{ width: "14rem" }}>
-            <Card.Img variant="top" src={item.imgUrl} />
+          <Card key={item.id} style={{ width: "250px", height:"480px"}}>
+            <Card.Img variant="top" src={item.imgUrl} style={{height:"180px",width:"250px",objectFit:"contain"}} />
             <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
+              <Card.Title style={{height:"30px"}}>{item.name}</Card.Title>
               <Card.Text>{item.description}</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">

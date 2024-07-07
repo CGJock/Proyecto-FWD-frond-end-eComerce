@@ -1,13 +1,20 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import '../styles/searchbar.css'
 
 const SearchBarPrincipal = ({filtroxNombre, inputRef}) => {
   return (
     <>
-        <div style={{ display:"flex",flexDirection:"row", gap:"30px"}}>
+        <div className="searchBar">
+          <div>
         <img style={{width: "100px", height:"40px"}} src="https://fjelie-mc.se/wp-content/uploads/2018/11/blog-ph-1.jpg" alt="Multichunches" />
-        <input ref={inputRef} onInput={() => filtroxNombre(inputRef.current.value)}   type="text" placeholder='Busqueda Por Nombre'/>
-        <Link to="#"> <p>Vende tus productos</p></Link>
-        <Link to="#"> <p>Trabaja con nosotros</p></Link>
+        </div>
+        <div >
+        <input className="search" ref={inputRef} onInput={() => filtroxNombre(inputRef.current.value)}   type="text" placeholder='Busqueda Por Nombre'/>
+        </div>
+        <div style={{display:"flex", gap:"10px", paddingRight:"10px", textAlign:'center',paddingTop:"10px"}}>
+        <Link to="#"> <p className="p-searchbar">Vende tus productos</p></Link>
+        <Link to="#"> <p className="p-searchbar">Trabaja con nosotros</p></Link>
+        </div>
         </div>
     </>
   )

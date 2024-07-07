@@ -1,54 +1,31 @@
 import postProducts from "../services/PostProducts";
-import { getItems } from "../services/getProducts";
-import { useState } from "react";
-import { useEffect } from "react";
+// import { getItems } from "../services/getProducts";
+// import { useState } from "react";
+// import { useEffect } from "react";
 
-const InputForm = () => {
-  let Electrodomesticos = "electrodomesticos";
-  let Herramientas = "herramientas";
-  let Muebles = "muebles";
-  let Vestimenta = "vestimenta";
-  let LineaBlanca = "lineaBlanca";
-  let Celulares = "celulares";
-  let Juguetes = "juguetes";
-  let Libros = "libros";
-  const [Category, setCategory] = useState("");
+const InputForm = (
+  {
+    categoriaobj,
+    provinciaobj,
+  Category,
+  setCategory,
+  Location,
+  setLocation,
+  Price,
+  setPrice,
+  Data,
+  setData,
+  Name,
+  setName,
+  Description,
+  setDescription,
+  handleInputChange,
+  imageUrl,
+  setImageUrl,
+  getAllItems
 
-  const [Location, setLocation] = useState("");
-  let Alajuela = "alajuela";
-  let Cartago = "cartago";
-  let Guanacaste = "guanacaste";
-  let Heredia = "heredia";
-  let SanJose = "sanjose";
-  let Limon = "limon";
-  let Puntarenas = "puntarenas";
-  const [Price, setPrice] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [Name, setName] = useState("");
-  const [Description, setDescription] = useState("");
-  const [Data, setData] = useState([]);
-
-  async function getData() {
-    const items = await getItems();
-    setData(items);
-  }
-
-  async function getAllItems() {
-    postProducts(Name, Description, Price, Category, Location, imageUrl);
-    getData();
-  }
-  const handleInputChange = (event) => {
-    setImageUrl(event.target.value);
-    {
-      imageUrl && (
-        <img
-          className="imgPost"
-          src={imageUrl}//bloque de codigo que permite visualizar una imagen a la hora de subirla
-          alt="Imagen"
-        />
-      );
-    }
-  };
+  }) => {
+ 
 //   useEffect(
 //     () => {
 //       console.log("mostra la oster");
@@ -89,14 +66,14 @@ const InputForm = () => {
         name="products"
         id="products"
       >
-        <option value={Electrodomesticos}>Electrodomesticos</option>
-        <option value={Herramientas}>Herramientas</option>
-        <option value={Muebles}>Muebles</option>
-        <option value={Vestimenta}>Vestimenta</option>
-        <option value={LineaBlanca}>LineaBlanca</option>
-        <option value={Celulares}>Celulares</option>
-        <option value={Juguetes}>Juguetes</option>
-        <option value={Libros}>Libros</option>
+        <option value={categoriaobj.Electrodomesticos}>Electrodomesticos</option>
+        <option value={categoriaobj.Herramientas}>Herramientas</option>
+        <option value={categoriaobj.Muebles}>Muebles</option>
+        <option value={categoriaobj.Vestimenta}>Vestimenta</option>
+        <option value={categoriaobj.LineaBlanca}>LineaBlanca</option>
+        <option value={categoriaobj.Celulares}>Celulares</option>
+        <option value={categoriaobj.Juguetes}>Juguetes</option>
+        <option value={categoriaobj.Libros}>Libros</option>
       </select>
 
       <label htmlFor="PuntoVenta">Punto Venta:</label>
@@ -106,13 +83,13 @@ const InputForm = () => {
         name="puntoventa"
         id="puntoventa"
       >
-        <option value={Alajuela}>Alajuela</option>
-        <option value={Cartago}>Cartago</option>
-        <option value={Guanacaste}>Guanacaste</option>
-        <option value={Heredia}>Heredia</option>
-        <option value={SanJose}>SanJose</option>
-        <option value={Limon}>Limon</option>
-        <option value={Puntarenas}>Puntarenas</option>
+        <option value={provinciaobj.Alajuela}>Alajuela</option>
+        <option value={provinciaobj.Cartago}>Cartago</option>
+        <option value={provinciaobj.Guanacaste}>Guanacaste</option>
+        <option value={provinciaobj.Heredia}>Heredia</option>
+        <option value={provinciaobj.SanJose}>SanJose</option>
+        <option value={provinciaobj.Limon}>Limon</option>
+        <option value={provinciaobj.Puntarenas}>Puntarenas</option>
       </select>
 
       <label htmlFor="price">Precio: </label>
