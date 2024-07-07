@@ -18,7 +18,7 @@ const CardsProducts = ({dataFiltrada}) => {
       >
         {dataFiltrada.map((item) => (
           <Card key={item.id} style={{ width: "250px", height:"480px"}}>
-            <Card.Img variant="top" src={item.imgUrl} style={{height:"180px",width:"250px",objectFit:"contain"}} />
+            <Card.Img variant="top" src={item.imgUrl} style={{height:"180px",width:"246px",objectFit:"contain"}} />
             <Card.Body>
               <Card.Title style={{height:"30px"}}>{item.name}</Card.Title>
               <Card.Text>{item.description}</Card.Text>

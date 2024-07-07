@@ -3,10 +3,9 @@ import postProducts from "../services/PostProducts";
 // import { useState } from "react";
 // import { useEffect } from "react";
 
-const InputForm = (
-  {
-    categoriaobj,
-    provinciaobj,
+const InputForm = ({
+  categoriaobj,
+  provinciaobj,
   Category,
   setCategory,
   Location,
@@ -22,17 +21,9 @@ const InputForm = (
   handleInputChange,
   imageUrl,
   setImageUrl,
-  getAllItems
+  getAllItems,
+}) => {
 
-  }) => {
- 
-//   useEffect(
-//     () => {
-//       console.log("mostra la oster");
-//       getData();
-//     },
-//     [],
-//   );
   return (
     <>
       <input
@@ -66,7 +57,9 @@ const InputForm = (
         name="products"
         id="products"
       >
-        <option value={categoriaobj.Electrodomesticos}>Electrodomesticos</option>
+        <option value={categoriaobj.Electrodomesticos}>
+          Electrodomesticos
+        </option>
         <option value={categoriaobj.Herramientas}>Herramientas</option>
         <option value={categoriaobj.Muebles}>Muebles</option>
         <option value={categoriaobj.Vestimenta}>Vestimenta</option>
