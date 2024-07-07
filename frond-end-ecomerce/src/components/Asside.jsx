@@ -1,4 +1,4 @@
-
+import '../styles/asside.css'
 
 const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVenta,setPuntoVenta,getAllItems}) => {
   let Electrodomesticos = "electrodomesticos";
@@ -19,6 +19,7 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
   
   return (
     <>
+    <div className="asside-busqueda">
       <label htmlFor="products">Selecciona una categoria:</label>
 
       <select
@@ -58,7 +59,7 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
 
       <p>Monto:{Price}</p>
       <button onClick={getAllItems}>Busqueda</button>
-      
+      </div>
     </>
   );
 };

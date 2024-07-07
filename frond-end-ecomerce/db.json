@@ -126,6 +126,33 @@
       "category": "",
       "location": "heredia",
       "imgUrl": "https://sony.scene7.com/is/image/sonyglobalsolutions/Boomboxes-product%20finder-desktop%20and%20mobile-Boomboxes-714x439?$productFinder$&fmt=png-alpha"
+    },
+    {
+      "id": "8a52",
+      "name": "Computadora",
+      "description": "Computadora gamer, corre el freefire",
+      "price": "317990",
+      "category": "",
+      "location": "sanjose",
+      "imgUrl": "https://enanosside.wordpress.com/wp-content/uploads/2011/08/pcvieja.jpg"
+    },
+    {
+      "id": "c7e1",
+      "name": "Galaxy s24",
+      "description": "Celular en perfectsas condiciones, con papeles",
+      "price": "400000",
+      "category": "celulares",
+      "location": "",
+      "imgUrl": "https://www.digitaltrends.com/wp-content/uploads/2024/01/samsung-galaxy-s24-marble-gray-held-2.jpg?p=1"
+    },
+    {
+      "id": "bc77",
+      "name": "Alfombra Zebra",
+      "description": "Alfombra imitacion zebra, perfecta para interiores",
+      "price": "44000",
+      "category": "muebles",
+      "location": "guanacaste",
+      "imgUrl": "https://m.media-amazon.com/images/I/71w9BcLN1NL._AC_UF894,1000_QL80_.jpg"
     }
   ]
 }

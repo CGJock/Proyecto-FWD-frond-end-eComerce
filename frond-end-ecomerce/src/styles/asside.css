@@ -1,0 +1,6 @@
+.asside-busqueda{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100px;
+}
