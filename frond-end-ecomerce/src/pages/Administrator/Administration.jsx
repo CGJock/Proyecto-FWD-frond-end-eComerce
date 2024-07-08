@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import InputForm from "../../components/Admin-UI/inputForm";
 import postProducts from "../../services/PostProducts";
 import AdminTable from "../../components/Admin-UI/AdminTable";
+import delProducts from "../../services/delProducts";
 
 const Administration = () => {
   const [Category, setCategory] = useState("");
@@ -70,6 +71,14 @@ const apiUrl = "http://localhost:3001/items"
     setimgUrl(event.target.value);
   };
 
+
+  async function delItems(id) {
+  let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
+  if (confirm(phrase) == true)
+   await delProducts(apiUrl+"/",id)
+  } 
+
+ 
   return (
     <>
       {/* si se pasan varios props como objeto se envian de manera individual dentro de llaves*/}
@@ -92,6 +101,7 @@ const apiUrl = "http://localhost:3001/items"
         imgUrl={imgUrl}
         setimgeUrl={setimgUrl}
         getAllItems={getAllItems}
+        
       />
       <AdminTable
         Data={Data}
@@ -102,6 +112,7 @@ const apiUrl = "http://localhost:3001/items"
         provinciaobj={provinciaobj}
         Location={Location}
         setLocation={setLocation}
+        delItems={delItems}
       />
      
     </>

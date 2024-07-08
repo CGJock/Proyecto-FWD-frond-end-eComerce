@@ -1,6 +1,6 @@
 
-const apiUrl = "http://localhost:3001/items/"
-const delProducts = async (id) => {
+
+const delProducts = async (apiUrl,id,) => {
     
     try {
           const response = await fetch(apiUrl+id, {
@@ -12,13 +12,13 @@ const delProducts = async (id) => {
            
               })
            });
-           console.log("eliminado con exitp")
-
+           console.log("borrado con exito")
+           return response
            
           
            
          } catch(error) {
-            alert("error al borrar")
+            console.log("borrar")
            } 
       }
       export default delProducts
