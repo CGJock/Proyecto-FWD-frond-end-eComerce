@@ -9,6 +9,8 @@ const AdminTable = ({
   Data,
   setDescription,
   Description,
+  delItems,
+  
 }
 ) => {
      const [Category, setCategory] = useState("");
@@ -86,10 +88,11 @@ const AdminTable = ({
                 />
               </td>
               <td>
-                <button key={producto.id}>Editar</button>
+                <button >Editar</button>
               </td>
               <td>
-                <button>borrar</button>
+                <button onClick={() => delItems(producto.id)}>scscsc</button>
+                {/* <input type="button" value="Eliminar" onClick={delItems(producto.id)} /> */}
               </td>
             </tr>
           ))}
