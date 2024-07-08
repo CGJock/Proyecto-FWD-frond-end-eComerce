@@ -1,7 +1,7 @@
-import postProducts from "../../services/PostProducts";
-// import { getItems } from "../services/getProducts";
-// import { useState } from "react";
-// import { useEffect } from "react";
+
+import SelectorCategoria from "../Admin-UI/Selector-categoria";
+import SelectorProvincia from "../Admin-UI/Selector-provincia";
+
 
 const InputForm = ({
   categoriaobj,
@@ -22,6 +22,7 @@ const InputForm = ({
   imgUrl,
   setimgUrl,
   getAllItems,
+  
 }) => {
 
   return (
@@ -51,39 +52,12 @@ const InputForm = ({
 
       <label htmlFor="products">Selecciona una categoria:</label>
 
-      <select
-        value={Category}
-        onChange={(event) => setCategory(event.target.value)}
-        name="products"
-        id="products"
-      >
-        <option value={categoriaobj.Electrodomesticos}>
-          Electrodomesticos
-        </option>
-        <option value={categoriaobj.Herramientas}>Herramientas</option>
-        <option value={categoriaobj.Muebles}>Muebles</option>
-        <option value={categoriaobj.Vestimenta}>Vestimenta</option>
-        <option value={categoriaobj.LineaBlanca}>LineaBlanca</option>
-        <option value={categoriaobj.Celulares}>Celulares</option>
-        <option value={categoriaobj.Juguetes}>Juguetes</option>
-        <option value={categoriaobj.Libros}>Libros</option>
-      </select>
+      <SelectorCategoria setCategory={setCategory} Category={Category} categoriaobj={categoriaobj}/>
+      
 
       <label htmlFor="PuntoVenta">Punto Venta:</label>
-      <select
-        value={Location}
-        onChange={(event) => setLocation(event.target.value)}
-        name="puntoventa"
-        id="puntoventa"
-      >
-        <option value={provinciaobj.Alajuela}>Alajuela</option>
-        <option value={provinciaobj.Cartago}>Cartago</option>
-        <option value={provinciaobj.Guanacaste}>Guanacaste</option>
-        <option value={provinciaobj.Heredia}>Heredia</option>
-        <option value={provinciaobj.SanJose}>SanJose</option>
-        <option value={provinciaobj.Limon}>Limon</option>
-        <option value={provinciaobj.Puntarenas}>Puntarenas</option>
-      </select>
+    
+      <SelectorProvincia setLocation={setLocation} Location={Location} provinciaobj={provinciaobj}/>
 
       <label htmlFor="price">Precio: </label>
 

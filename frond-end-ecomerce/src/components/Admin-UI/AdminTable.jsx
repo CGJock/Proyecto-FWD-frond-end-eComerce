@@ -1,6 +1,4 @@
-// import { useEffect } from "react";
-// import { getItems } from "../services/getProducts";
-// import delProducts from "../services/delProducts";
+
 import { useState } from "react";
 import SelectorCategoria from "./Selector-categoria";
 import SelectorProvincia from "./Selector-provincia";
@@ -92,7 +90,8 @@ const AdminTable = ({
               </td>
               <td>
                 <button onClick={() => delItems(producto.id)}>scscsc</button>
-                {/* <input type="button" value="Eliminar" onClick={delItems(producto.id)} /> */}
+                {/* Se llama una funcion de callback si se llama de manera normal, sera el resultado de la 
+                funcion y se enciclara /> */}
               </td>
             </tr>
           ))}

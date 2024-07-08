@@ -5,6 +5,7 @@ import postProducts from "../../services/PostProducts";
 import AdminTable from "../../components/Admin-UI/AdminTable";
 import delProducts from "../../services/delProducts";
 
+
 const Administration = () => {
   const [Category, setCategory] = useState("");
   const categoriaobj = {
