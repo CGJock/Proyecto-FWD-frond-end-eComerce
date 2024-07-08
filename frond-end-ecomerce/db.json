@@ -37,5 +37,15 @@
       "mail": "1234"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "id": "4654",
+      "Name": "Sillones Rojos",
+      "Description": "Dan un tono elegante al hogar",
+      "Price": 144000,
+      "Category": "muebles",
+      "Location": "cartago",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdyj7ZY3bKpdBStMoobZ5qZR2qx590EMlxGQ&s"
+    }
+  ]
 }
