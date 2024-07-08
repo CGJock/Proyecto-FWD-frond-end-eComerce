@@ -1,4 +1,4 @@
-import postProducts from "../services/PostProducts";
+import postProducts from "../../services/PostProducts";
 // import { getItems } from "../services/getProducts";
 // import { useState } from "react";
 // import { useEffect } from "react";
@@ -19,8 +19,8 @@ const InputForm = ({
   Description,
   setDescription,
   handleInputChange,
-  imageUrl,
-  setImageUrl,
+  imgUrl,
+  setimgUrl,
   getAllItems,
 }) => {
 
@@ -30,11 +30,11 @@ const InputForm = ({
         className="inpPost"
         type="text"
         placeholder="URL de la Imagen"
-        value={imageUrl}
+        value={imgUrl}
         onChange={handleInputChange}
       />
       <div>
-        <img className="imgPost" src={imageUrl} alt="Imagen" />
+        <img className="imgPost" src={imgUrl} alt="Imagen" />
       </div>
 
       <input
@@ -89,7 +89,7 @@ const InputForm = ({
 
       <input
         value={Price}
-        onChange={(event) => setPrice(event.target.value.trim())}
+        onChange={(event) => setPrice(parseInt(event.target.value.trim()))}
         id="digito"
         type="number"
         placeholder="Precio"

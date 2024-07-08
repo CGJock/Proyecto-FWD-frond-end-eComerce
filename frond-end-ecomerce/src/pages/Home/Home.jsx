@@ -30,20 +30,22 @@ const PriceSlider = (event) => {//setea elvalor del slider
 
 async function getAllItems() {//fucion que trae los datos filtrados,con .filter se emparejan los elementos con las mismas condiciones
   const data = await getItems();
-  const categ = data.filter((item) => item.category === Seleccionado && Price > item.price);
+  const categ = data.filter((item) => item.Category === Seleccionado && Price > item.Price && item.Location === puntoVenta );
   setdataFiltrada(categ)
 
 }
 async function filtroxNombre(kInput) {//funcion que filtra los elementos por nombre en tiempo real con search bar
+  
+const data = await getItems();//se obtiene la data desde el llamado a la api
 
-  const data = await getItems();//se obtiene la data desde el llamado a la api
-
- const filtroIncludes = data.filter((element) => element.name.toLowerCase().includes(kInput));
+const filtroIncludes = data.filter((element) => element.Name.toLowerCase().includes(kInput));
   //el valor de la data va ser igual a un filtro de los elementos, en este caso nombre, y a cada uno de los elementos
   //se verifica si incluye kinput que trae el valor del input searchbar
   if (filtroIncludes) {
     setdataFiltrada(filtroIncludes)//si hay datos que cumplen la condicion filtro includes sera la nueva data
     
+  } else{
+    console.log("ni idea que pasa")
   }
 }
   return (

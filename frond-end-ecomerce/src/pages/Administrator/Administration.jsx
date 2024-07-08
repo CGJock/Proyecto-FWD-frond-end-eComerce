@@ -1,6 +1,6 @@
 import { getItems } from "../../services/getProducts";
 import { useState, useEffect } from "react";
-import InputForm from "../../components/inputForm";
+import InputForm from "../../components/Admin-UI/inputForm";
 import postProducts from "../../services/PostProducts";
 import AdminTable from "../../components/Admin-UI/AdminTable";
 
@@ -31,10 +31,14 @@ const Administration = () => {
   };
 
   const [Price, setPrice] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [imgUrl, setimgUrl] = useState("");
   const [Name, setName] = useState("");
   const [Description, setDescription] = useState("");
   const [Data, setData] = useState([]);
+
+const datos = {Name, Description, Price ,Category, Location, imgUrl}
+const apiUrl = "http://localhost:3001/items"
+ 
   
 
   useEffect(() => {
@@ -52,11 +56,18 @@ const Administration = () => {
 
   async function getAllItems() {
     //se hace el post y luego se llama la data para ir actualizando con cada actualizacion
-    postProducts(Name, Description, Price, Category, Location, imageUrl);
-    getData();
+    if (!Name || !Description || !Price || !Category || !Location || !imgUrl) {
+      return alert("No se permiten espacios en blancos")
+    }
+    let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
+    if (confirm(phrase) == true) {
+      postProducts(apiUrl,datos);
+      getData();
+    }
+    
   }
   const handleInputChange = (event) => {
-    setImageUrl(event.target.value);
+    setimgUrl(event.target.value);
   };
 
   return (
@@ -78,8 +89,8 @@ const Administration = () => {
         Description={Description}
         setDescription={setDescription}
         handleInputChange={handleInputChange}
-        imageUrl={imageUrl}
-        setImageUrl={setImageUrl}
+        imgUrl={imgUrl}
+        setimgeUrl={setimgUrl}
         getAllItems={getAllItems}
       />
       <AdminTable
@@ -97,4 +108,4 @@ const Administration = () => {
   );
 };
 
-export default Administration;
+export default Administration

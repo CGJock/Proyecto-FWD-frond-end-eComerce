@@ -10,11 +10,8 @@ const AdminTable = ({
   setDescription,
   Description,
 }
-
-
 ) => {
-
-    const [Category, setCategory] = useState("");
+     const [Category, setCategory] = useState("");
     const categoriaobj = {
       //objecto que se pasa como prop para setear la categoria
       Electrodomesticos: "electrodomesticos",
@@ -53,20 +50,20 @@ const AdminTable = ({
           </tr>
         </thead>
         <tbody>
-          {Data.map((perrito) => (
-            <tr key={perrito.id}>
-              <td>{perrito.name}</td>
+          {Data.map((producto) => (
+            <tr key={producto.id}>
+              <td>{producto.Name}</td>
               <td>
-                {perrito.description}
+                {producto.Description}
                 <textarea
                   value={Description}
                   style={{ display: "none" }}
                   onChange={(event) => setDescription(event.target.value)}
                 ></textarea>
               </td>
-              <td>{perrito.price}</td>
+              <td>{producto.Price}</td>
               <td>
-                {perrito.Category}
+                {producto.Category}
                 <SelectorCategoria
                 categoriaobj={categoriaobj}
                 Category={Category}
@@ -74,7 +71,7 @@ const AdminTable = ({
                  />
               </td>
               <td>
-                {perrito.location}
+                {producto.Location}
                 <SelectorProvincia
                 provinciaobj={provinciaobj}
                 Location={Location}
@@ -83,13 +80,13 @@ const AdminTable = ({
               </td>
               <td>
                 <img
-                  src={perrito.imgUrl}
+                  src={producto.imgUrl}
                   style={{ height: "100px", width: "120px" }}
-                  alt={perrito.name}
+                  alt={producto.Name}
                 />
               </td>
               <td>
-                <button key={perrito.id}>Editar</button>
+                <button key={producto.id}>Editar</button>
               </td>
               <td>
                 <button>borrar</button>

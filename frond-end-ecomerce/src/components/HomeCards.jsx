@@ -20,15 +20,15 @@ const CardsProducts = ({dataFiltrada}) => {
           <Card key={item.id} style={{ width: "250px", height:"480px"}}>
             <Card.Img variant="top" src={item.imgUrl} style={{height:"180px",width:"246px",objectFit:"contain"}} />
             <Card.Body>
-              <Card.Title style={{height:"30px"}}>{item.name}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
+              <Card.Title style={{height:"30px"}}>{item.Name}</Card.Title>
+              <Card.Text>{item.Description}</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>Lugar de venta: {item.location}</ListGroup.Item>
+              <ListGroup.Item>Lugar de venta: {item.Location}</ListGroup.Item>
               <ListGroup.Item>
-                Precio del articulo: ₡{item.price}
+                Precio del articulo: ₡{item.Price}
               </ListGroup.Item>
-              <ListGroup.Item>Categoria: {item.category}</ListGroup.Item>
+              <ListGroup.Item>Categoria: {item.Category}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               <Card.Link href="#">Card Link</Card.Link>
