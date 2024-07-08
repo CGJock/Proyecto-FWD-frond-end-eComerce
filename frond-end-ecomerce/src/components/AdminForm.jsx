@@ -109,9 +109,9 @@ async function insertProducts() {
         
        
           <tr key={item.id} style={{border: "solid black 2px"}}>
-            <td>{item.name}</td>
+            <td>{item.Name}</td>
             <td>
-              {item.description}
+              {item.Description}
               <textarea
                 value={Description} style={{display:"none"}}
                 onChange={(event) => setDescription(event.target.value)}
@@ -139,7 +139,7 @@ async function insertProducts() {
               </select>
             </td>
             <td>
-              {item.location}
+              {item.Location}
               <select style={{display: SelectLocationVisb ? "block" : "none"}}
                 value={Location}
                 onChange={(event) => setLocation(event.target.value)}
