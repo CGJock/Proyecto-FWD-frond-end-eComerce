@@ -20,7 +20,7 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
   return (
     <>
     <div className="asside-busqueda">
-      <label htmlFor="products">Selecciona una categoria:</label>
+      <label htmlFor="products"><h6>Selecciona una categoria</h6></label>
 
       <select
         value={Seleccionado}
@@ -38,6 +38,7 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
         <option value={Libros}>Libros</option>
       </select>
 
+      <h6>Selecciona un punto de venta</h6>
       <select
         value={PuntoVenta}
         onChange={(event) => setPuntoVenta(event.target.value)}

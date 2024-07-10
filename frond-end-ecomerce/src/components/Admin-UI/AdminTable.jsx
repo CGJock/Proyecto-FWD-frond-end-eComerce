@@ -1,40 +1,51 @@
-
-import { useState } from "react";
-import SelectorCategoria from "./Selector-categoria";
-import SelectorProvincia from "./Selector-provincia";
+import { useRef, useState } from "react";
+import ModalAdmin from "../Admin-UI/Modal";
 
 const AdminTable = ({
   Data,
   setDescription,
   Description,
   delItems,
-  
-}
-) => {
-     const [Category, setCategory] = useState("");
-    const categoriaobj = {
-      //objecto que se pasa como prop para setear la categoria
-      Electrodomesticos: "electrodomesticos",
-      Herramientas: "herramientas",
-      Muebles: "muebles",
-      Vestimenta: "vestimenta",
-      LineaBlanca: "lineaBlanca",
-      Celulares: "celulares",
-      Juguetes: "juguetes",
-      Libros: "libros",
-    };
-  
-    const [Location, setLocation] = useState("");
-    const provinciaobj = {
-      //objecto que setea el lugar de venta
-      Alajuela: "alajuela",
-      Cartago: "cartago",
-      Guanacaste: "guanacaste",
-      Heredia: "heredia",
-      SanJose: "sanjose",
-      Limon: "limon",
-      Puntarenas: "puntarenas",
-    };
+  mostrarElementos,
+  Show,
+  editarItems,
+  datosEdit
+  // show,
+  // handleClose,
+  // handleShow,
+}) => {
+  const [Category, setCategory] = useState("");
+  const categoriaobj = {
+    //objecto que se pasa como prop para setear la categoria
+    Electrodomesticos: "electrodomesticos",
+    Herramientas: "herramientas",
+    Muebles: "muebles",
+    Vestimenta: "vestimenta",
+    LineaBlanca: "lineaBlanca",
+    Celulares: "celulares",
+    Juguetes: "juguetes",
+    Libros: "libros",
+  };
+
+  const [Location, setLocation] = useState("");
+  const provinciaobj = {
+    //objecto que setea el lugar de venta
+    Alajuela: "alajuela",
+    Cartago: "cartago",
+    Guanacaste: "guanacaste",
+    Heredia: "heredia",
+    SanJose: "sanjose",
+    Limon: "limon",
+    Puntarenas: "puntarenas",
+  };
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [productosProps, setproductosProps] = useState([]);
+  const [nombre, setnombre] = useState("");
+
   return (
     <>
       <table>
@@ -62,22 +73,8 @@ const AdminTable = ({
                 ></textarea>
               </td>
               <td>{producto.Price}</td>
-              <td>
-                {producto.Category}
-                <SelectorCategoria
-                categoriaobj={categoriaobj}
-                Category={Category}
-                setCategory={setCategory}
-                 />
-              </td>
-              <td>
-                {producto.Location}
-                <SelectorProvincia
-                provinciaobj={provinciaobj}
-                Location={Location}
-                setLocation={setLocation}
-                />
-              </td>
+              <td>{producto.Category}</td>
+              <td>{producto.Location}</td>
               <td>
                 <img
                   src={producto.imgUrl}
@@ -86,10 +83,19 @@ const AdminTable = ({
                 />
               </td>
               <td>
-                <button >Editar</button>
+                <button
+                  onClick={() => {
+                    setShow(!show);
+                    console.log(producto);
+                    setproductosProps(producto);
+                    setnombre(producto.Name);
+                  }}
+                >
+                  Editar
+                </button>
               </td>
               <td>
-                <button onClick={() => delItems(producto.id)}>scscsc</button>
+                <button onClick={() => delItems(producto.id)}>Eliminar</button>
                 {/* Se llama una funcion de callback si se llama de manera normal, sera el resultado de la 
                 funcion y se enciclara /> */}
               </td>
@@ -97,6 +103,21 @@ const AdminTable = ({
           ))}
         </tbody>
       </table>
+      <ModalAdmin
+        Show={show}
+        handleClose={handleClose}
+        handleShow={handleShow}
+        provinciaobj={provinciaobj}
+        Location={location}
+        setLocation={setLocation}
+        Category={Category}
+        setCategory={setCategory}
+        categoriaobj={categoriaobj}
+        Producto={productosProps}
+        nombre={nombre}
+        editarItems={editarItems}
+        datosEdit={datosEdit}
+      />
     </>
   );
 };

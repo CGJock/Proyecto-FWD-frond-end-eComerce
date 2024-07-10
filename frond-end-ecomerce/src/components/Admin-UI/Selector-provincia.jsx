@@ -2,12 +2,12 @@ const SelectorProvincia = (
     {
         provinciaobj,
         setLocation,
-        Location
+        Location,
     }
 ) => {
   return (
     <>
-         <select
+         <select 
         value={Location}
         onChange={(event) => setLocation(event.target.value)}
         name="puntoventa"

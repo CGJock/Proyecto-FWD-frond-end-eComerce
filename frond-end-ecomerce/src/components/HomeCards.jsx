@@ -15,13 +15,14 @@ const CardsProducts = ({dataFiltrada}) => {
           columnGap: "60px",
           marginLeft: "60px",
         }}
+        //cambiar esto no le gusta a barry
       >
         {dataFiltrada.map((item) => (
           <Card key={item.id} style={{ width: "250px", height:"480px"}}>
             <Card.Img variant="top" src={item.imgUrl} style={{height:"180px",width:"246px",objectFit:"contain"}} />
             <Card.Body>
               <Card.Title style={{height:"30px"}}>{item.Name}</Card.Title>
-              <Card.Text>{item.Description}</Card.Text>
+              <Card.Text style={{overflow:"auto"}}> Descripcion: {item.Description}</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroup.Item>Lugar de venta: {item.Location}</ListGroup.Item>
