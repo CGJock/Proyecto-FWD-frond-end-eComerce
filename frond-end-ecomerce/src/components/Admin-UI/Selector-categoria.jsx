@@ -3,12 +3,11 @@ const SelectorCategoria = (
   {
     categoriaobj,
     Category,
-    setCategory
-    
+    setCategory,
   }) => {
   return (
     <>
-          <select
+          <select 
         value={Category}
         onChange={(event) => setCategory(event.target.value)}
         name="products"

@@ -39,13 +39,37 @@
   ],
   "items": [
     {
-      "id": "4654",
-      "Name": "Sillones Rojos",
-      "Description": "Dan un tono elegante al hogar",
-      "Price": 144000,
-      "Category": "muebles",
-      "Location": "cartago",
-      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdyj7ZY3bKpdBStMoobZ5qZR2qx590EMlxGQ&s"
+      "Name": "Chapeadora",
+      "Description": "Perfecta para labores pesadas",
+      "Price": "115000",
+      "Category": "herramientas",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWgnBa_cJ58pLwhIY-fDWsXLhkN2lzCt5WQ&s",
+      "id": "1293"
+    },
+    {
+      "id": "0442",
+      "Name": "Aceitera",
+      "Description": "para ponerle aceite a la ensalada",
+      "Price": 30000,
+      "Category": "",
+      "Location": "puntarenas",
+      "imgUrl": "https://m.media-amazon.com/images/I/71Kw-0utxUL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Name": "Pala",
+      "Description": "Poco uso",
+      "Category": "herramientas",
+      "Price": 10000,
+      "id": "2ee1"
+    },
+    {
+      "id": "1362",
+      "Name": "Vestido de Bodas",
+      "Description": "Se vende por divorcio",
+      "Price": 23000,
+      "Category": "vestimenta",
+      "Location": "sanjose",
+      "imgUrl": "https://i.ebayimg.com/thumbs/images/g/aXIAAOSwWD9lrQyz/s-l640.jpg"
     }
   ]
 }

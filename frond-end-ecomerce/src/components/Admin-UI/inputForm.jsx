@@ -51,19 +51,17 @@ const InputForm = ({
       ></textarea>
 
       <label htmlFor="products">Selecciona una categoria:</label>
-
       <SelectorCategoria setCategory={setCategory} Category={Category} categoriaobj={categoriaobj}/>
       
 
       <label htmlFor="PuntoVenta">Punto Venta:</label>
-    
-      <SelectorProvincia setLocation={setLocation} Location={Location} provinciaobj={provinciaobj}/>
+      <SelectorProvincia  setLocation={setLocation} Location={Location} provinciaobj={provinciaobj}/>
 
       <label htmlFor="price">Precio: </label>
-
       <input
         value={Price}
         onChange={(event) => setPrice(parseInt(event.target.value.trim()))}
+        min={1}
         id="digito"
         type="number"
         placeholder="Precio"

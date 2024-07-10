@@ -4,6 +4,7 @@ import InputForm from "../../components/Admin-UI/inputForm";
 import postProducts from "../../services/PostProducts";
 import AdminTable from "../../components/Admin-UI/AdminTable";
 import delProducts from "../../services/delProducts";
+import put from "../../services/put";
 
 
 const Administration = () => {
@@ -37,9 +38,12 @@ const Administration = () => {
   const [Name, setName] = useState("");
   const [Description, setDescription] = useState("");
   const [Data, setData] = useState([]);
-
+  const [Show, setShow] = useState(false);
+  
+  
 const datos = {Name, Description, Price ,Category, Location, imgUrl}
 const apiUrl = "http://localhost:3001/items"
+
  
   
 
@@ -58,16 +62,28 @@ const apiUrl = "http://localhost:3001/items"
 
   async function getAllItems() {
     //se hace el post y luego se llama la data para ir actualizando con cada actualizacion
-    if (!Name || !Description || !Price || !Category || !Location || !imgUrl) {
-      return alert("No se permiten espacios en blancos")
-    }
-    let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
-    if (confirm(phrase) == true) {
-      postProducts(apiUrl,datos);
-      getData();
-    }
     
-  }
+    if (!datos.Name) {
+      return alert("rellena el nombre") }
+      if (!datos.Description) {
+        return alert("rellena el Descripcion") }
+        if (!datos.Price) {
+          return alert("rellenar precio") }
+          if (!datos.Category) {
+              return alert("rellenar categoria ") }
+              if (!datos.Location) {
+                  return alert("rellenar ubicacion") }
+                  if (!datos.imgUrl) {
+                    return alert("rellenar imagen")
+                  }
+    else {
+      let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
+      if (confirm(phrase) == true) {
+        postProducts(apiUrl,datos);
+        getData();
+    }
+      }
+      }
   const handleInputChange = (event) => {
     setimgUrl(event.target.value);
   };
@@ -75,11 +91,22 @@ const apiUrl = "http://localhost:3001/items"
 
   async function delItems(id) {
   let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
-  if (confirm(phrase) == true)
-   await delProducts(apiUrl+"/",id)
+  if (confirm(phrase));
+   await delProducts(apiUrl+"/",id);
   } 
 
- 
+  function mostrarElementos() {
+     setShow(true);
+     
+  }
+
+  async function editarItems(id,NameEdit,Description,Category,locationEdit,PrecioEdit,imgEditada) {
+    
+    const apiEdit = `http://localhost:3001/items/${id}`
+    await put(apiEdit,NameEdit,Description,Category,locationEdit,PrecioEdit,imgEditada)
+     
+  }
+
   return (
     <>
       {/* si se pasan varios props como objeto se envian de manera individual dentro de llaves*/}
@@ -114,6 +141,9 @@ const apiUrl = "http://localhost:3001/items"
         Location={Location}
         setLocation={setLocation}
         delItems={delItems}
+        mostrarElementos={mostrarElementos}
+        Show={Show}
+        editarItems={editarItems}
       />
      
     </>
