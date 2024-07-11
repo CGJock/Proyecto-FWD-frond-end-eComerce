@@ -9,7 +9,7 @@ const put = async (apiUrl,NameEdit,Description,CategoryEdit,locationEdit,PrecioE
                 Name: NameEdit,
                 Description: Description,
                 Price: PrecioEdit,
-                Category: CategoryEdit,
+                Category: CategoryEdit,//al hacer un put se envian los valores por separado
                 Location: locationEdit,
                 imgUrl: imgEditada
             })

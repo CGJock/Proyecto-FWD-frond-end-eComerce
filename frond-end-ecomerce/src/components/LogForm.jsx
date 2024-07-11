@@ -19,11 +19,11 @@ const LoginForm = () => {
         let usuarioEncontrado = false;
         datos.forEach((e)=> {
         User === e.user && Password === e.password && Password === e.password ?  usuarioEncontrado = true : usuarioEncontrado = false 
-        localStorage.setItem("user", JSON.stringify(e.user))
+        localStorage.setItem("user", JSON.stringify(e.user))//si ecuentra coincidencia en el usuario setea un llave en el local storage con su nombre
         
         });
         if (User === "ADMIN") {
-          navigate("/Administration")
+          navigate("/Administration")//solo al ser el admin le permite ir al la pagina de administracion
         } else if(usuarioEncontrado){
           navigate("/home")
         }else{

@@ -6,14 +6,7 @@ const postProducts = async (apiUrl,datos) => {
            headers: {
              'Content-Type': 'application/json'
              },
-             body: JSON.stringify((datos)
-              //  name: name,
-              //  description: description,
-              //  price: price,
-              //  category: category,
-              //  location: location,
-              //  imgUrl: imgUrl
-       
+             body: JSON.stringify((datos)//los datos contiene el objeto con los input
               )
            });
            const data = await response.json()
