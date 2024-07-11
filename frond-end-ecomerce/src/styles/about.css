@@ -1,0 +1,20 @@
+h1{
+    color: brown;
+}
+.logo{
+    margin-left: 38%;
+}
+.inputs{
+    color: #DA0A22;
+    font-size: large;
+}
+.contenedorContactUs{
+    margin-left: 430px;
+}
+.contactUsBtn{
+    background-color: #DA0A22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10%;
+}

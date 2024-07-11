@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postTask } from '../services/fetch';
 import { getTask } from '../services/fetch';
+import { Link } from 'react-router-dom';
+import '../styles/register.css'
+import logocuadrado from '../assets/logocuadrado.png'
 
 
 const Registform = () => {
@@ -37,7 +40,8 @@ const Registform = () => {
             }
         }
      if(ProfileExists === false){//si el perfil no existia previamente se registra y redirecciona a la pagina del login
-                postTask(User,Mail,Password)//se agregan los parametros al post
+                await postTask(User,Mail,Password)//se agregan los parametros al post
+                alert("usuario creado con exito")
                 navigate("/Login")
             } else if (ProfileExists === true) {
                 alert("usuario o correo no disponible")
@@ -45,25 +49,34 @@ const Registform = () => {
     }      
   return (
         <>   
-        <form onSubmit={HandleForm} action="">
+        <img className='logo' src={logocuadrado} alt="" />
+        <div className='contenedor'>
+        <form  onSubmit={HandleForm} action="">
 
-        <label>Ingrese su usuario
-        <input value={User} onChange={(event) => setUser(event.target.value.trim())} id='User' type='text' placeholder='usuario'></input>
-        </label>Ingrese su correo
-        <label>Ingrese su correo
-        <input value={Mail} onChange={(event) => setMail(event.target.value.trim())} id='Mail' type='text' placeholder='contra'></input>
+        <label>Ingrese su usuario <br />
+        <input className='regInput' value={User} onChange={(event) => setUser(event.target.value.trim())} id='User' type='text' placeholder='Usuario'></input>
+        </label> 
+        
+        <label>Ingrese su correo <br />
+        <input className='regInput' value={Mail} onChange={(event) => setMail(event.target.value.trim())} id='Mail' type='text' placeholder='Correo'></input>
         </label>
-        <label>Ingrese nuevamente su correo
-        <input value={MailValidation} onChange={(event) => setMailValidation(event.target.value.trim())} id='MailValidation' type="text" placeholder='Confirme su correo' />
+        
+        <label>Ingrese nuevamente su correo <br />
+        <input className='regInput' value={MailValidation} onChange={(event) => setMailValidation(event.target.value.trim())} id='MailValidation' type="text" placeholder='Confirme su correo' />
         </label>
-        <label>Ingrese su Contraseña
-        <input value={Password} onChange={(event) => setPassword(event.target.value.trim())} id='Password' type='text' placeholder='contra'></input>
+        
+        <label>Ingrese su Contraseña <br />
+        <input className='regInput' value={Password} onChange={(event) => setPassword(event.target.value.trim())} id='Password' type='text' placeholder='Contraseña'></input>
         </label>
-        <label>Ingrese nuevamente su Contraseña
-        <input value={PasswordValidation} onChange={(event) => setPasswordValidation(event.target.value.trim())} id='Password' type='text' placeholder='contra'></input>
+        
+        <label>Ingrese nuevamente su Contraseña <br />
+        <input className='regInput' value={PasswordValidation} onChange={(event) => setPasswordValidation(event.target.value.trim())} id='Password' type='text' placeholder='Confirme su Contraseña'></input>
         </label>
-        <input type="submit" />
+        
+        <input className='regBtn' type="submit" />
+        <Link to="/login"><p>Ya tienes una cuenta?</p></Link>
         </form>
+        </div>
       </>
     )
   
