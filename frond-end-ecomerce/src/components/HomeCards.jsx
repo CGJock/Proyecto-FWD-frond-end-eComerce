@@ -8,7 +8,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 const CardsProducts = ({dataFiltrada}) => {
 
   return (
-    
+      <div style={{overflow:"auto"}}>
       <Row xs={1} md={3}  className="g-4">
         {dataFiltrada.map((item) => (
           <Col key={item.id}>
@@ -33,6 +33,7 @@ const CardsProducts = ({dataFiltrada}) => {
           </Col>
         ))}
       </Row>
+      </div>
     
   );
 }

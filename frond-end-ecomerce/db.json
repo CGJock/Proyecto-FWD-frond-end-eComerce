@@ -33,8 +33,8 @@
     {
       "id": "3d39",
       "user": "ADMIN",
-      "password": "@admin.com",
-      "mail": "1234"
+      "password": "1234",
+      "mail": "@admin.com"
     },
     {
       "id": "81ec",
@@ -131,6 +131,12 @@
       "user": "gatito",
       "password": "1234",
       "mail": "gatito@mail.com"
+    },
+    {
+      "id": "cfb9",
+      "user": "usuario10",
+      "password": "1234",
+      "mail": "usuario10@mail.com"
     }
   ],
   "items": [
@@ -142,15 +148,6 @@
       "Location": "guanacaste",
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWgnBa_cJ58pLwhIY-fDWsXLhkN2lzCt5WQ&s",
       "id": "1293"
-    },
-    {
-      "id": "1362",
-      "Name": "Vestido de Bodas",
-      "Description": "Se vende por divorcio",
-      "Price": 23000,
-      "Category": "vestimenta",
-      "Location": "sanjose",
-      "imgUrl": "https://i.ebayimg.com/thumbs/images/g/aXIAAOSwWD9lrQyz/s-l640.jpg"
     },
     {
       "id": "d7f9",
