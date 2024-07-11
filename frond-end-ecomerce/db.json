@@ -43,6 +43,7 @@
       "Description": "Perfecta para labores pesadas",
       "Price": "115000",
       "Category": "herramientas",
+      "Location": "guanacaste",
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWgnBa_cJ58pLwhIY-fDWsXLhkN2lzCt5WQ&s",
       "id": "1293"
     },
@@ -56,13 +57,6 @@
       "imgUrl": "https://m.media-amazon.com/images/I/71Kw-0utxUL._AC_UF1000,1000_QL80_.jpg"
     },
     {
-      "Name": "Pala",
-      "Description": "Poco uso",
-      "Category": "herramientas",
-      "Price": 10000,
-      "id": "2ee1"
-    },
-    {
       "id": "1362",
       "Name": "Vestido de Bodas",
       "Description": "Se vende por divorcio",
@@ -70,6 +64,60 @@
       "Category": "vestimenta",
       "Location": "sanjose",
       "imgUrl": "https://i.ebayimg.com/thumbs/images/g/aXIAAOSwWD9lrQyz/s-l640.jpg"
+    },
+    {
+      "id": "d7f9",
+      "Name": "Iphone 15 Pro",
+      "Description": "4 meses de uso, se vende por cuotas",
+      "Price": 320000,
+      "Category": "celulares",
+      "Location": "heredia",
+      "imgUrl": "https://www.lavanguardia.com/andro4all/hero/2023/11/iphone-15-pro-max-modelo-titanio-azul.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+    },
+    {
+      "id": "f3f5",
+      "Name": "Camisa de Bicho",
+      "Description": "Camisa original Portugal firmada por CR7",
+      "Price": 14000,
+      "Category": "vestimenta",
+      "Location": "sanjose",
+      "imgUrl": "https://i.ebayimg.com/thumbs/images/g/6UkAAOSw5t5ljMbW/s-l1200.jpg"
+    },
+    {
+      "id": "1d5f",
+      "Name": "Sillas minimalistas",
+      "Description": "amarillas, brindan un tono calido al hogar",
+      "Price": 190500,
+      "Category": "muebles",
+      "Location": "limon",
+      "imgUrl": "https://sevilla.abc.es/estilo/bulevarsur//wp-content/uploads/sites/14/2022/10/sillas-comedor-modernas-vintage3.jpg"
+    },
+    {
+      "id": "3d13",
+      "Name": "Libro Frankistein",
+      "Description": "Libro de Frankistein, en Ingles",
+      "Price": 14000,
+      "Category": "libros",
+      "Location": "heredia",
+      "imgUrl": "https://cdn.prod.website-files.com/6034d7d1f3e0f52c50b2adee/625452f43a8fa502af2b8a14_6034d7d1f3e0f525c6b2b272_frankenstein-mary-shelley-editorial-alma.jpeg"
+    },
+    {
+      "id": "3176",
+      "Name": "Monopoly MarioKart",
+      "Description": "Juego de Monopoly version Mario Kart",
+      "Price": 6000,
+      "Category": "juguetes",
+      "Location": "puntarenas",
+      "imgUrl": "https://http2.mlstatic.com/D_NQ_NP_805025-MLU73421003611_122023-O.webp"
+    },
+    {
+      "id": "60cb",
+      "Name": "Lijadora",
+      "Description": "Lijadora para trabajos chicos",
+      "Price": 30000,
+      "Category": "herramientas",
+      "Location": "guanacaste",
+      "imgUrl": "https://www.colonoconstruccion.com/images/catalog/products/7973370.jpg"
     }
   ]
 }

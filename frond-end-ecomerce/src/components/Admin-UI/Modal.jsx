@@ -5,7 +5,7 @@ import SelectorProvincia from '../Admin-UI/Selector-provincia';
 import {  useEffect } from 'react';
 import { useState } from 'react';
 
-function ModalAdmin({categoriaobj,Category,setCategory,provinciaobj,setLocation,Location,Producto,handleClose,Show,nombre,editarItems,
+function ModalAdmin({categoriaobj,Category,setCategory,provinciaobj,setLocation,Location,Producto,handleClose,Show,editarItems,
   
 }) {
 
@@ -13,9 +13,9 @@ function ModalAdmin({categoriaobj,Category,setCategory,provinciaobj,setLocation,
   const [NameEdit, setNameEdit] = useState('');
   const [Description, setDescription] = useState('');
   const [PrecioEdit, setPrecioEdit] = useState('');
-  const [imgEditada, setimgEditada] = useState('')
+  const [imgEditada, setimgEditada] = useState('');
   const [CategoryEdit,setCategoryEdit] = useState('');
-  const [locationEdit,setlocationEdit] = useState('')
+  const [locationEdit,setlocationEdit] = useState('');
  
 
 useEffect(() => {
@@ -23,19 +23,16 @@ useEffect(() => {
     setNameEdit(Producto.Name);
     setDescription(Producto.Description);
     setPrecioEdit(Producto.Price);
-    setimgEditada(Producto.imgUrl)
-    setCategoryEdit(Producto.Category)
-    setlocationEdit(Producto.Location)
+    setimgEditada(Producto.imgUrl);
+    setCategoryEdit(Producto.Category);
+    setlocationEdit(Producto.Location);
   }
 },[Producto])
 
 
   return (
     <>  
-      {/* <Button variant="primary" onClick={handleShow}>
-        Launch static backdrop modal
-      </Button> */}
-
+  
       <Modal
         show={Show}
         onHide={handleClose}
@@ -68,7 +65,8 @@ useEffect(() => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => editarItems(Producto.id,NameEdit,Description,CategoryEdit,locationEdit,PrecioEdit,imgEditada)}>Confirmar</Button>
+          <Button variant="primary" onClick={() => editarItems(Producto.id,NameEdit,Description,
+            CategoryEdit,locationEdit,PrecioEdit,imgEditada)} >Confirmar</Button>
         </Modal.Footer>
       </Modal>
     </>

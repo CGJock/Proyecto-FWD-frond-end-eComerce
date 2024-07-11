@@ -45,20 +45,15 @@ const datos = {Name, Description, Price ,Category, Location, imgUrl}
 const apiUrl = "http://localhost:3001/items"
 
  
-  
-
-  useEffect(() => {
-    async function getData() {
-      const datos = await getItems();
-      setData(datos);
-    }
+useEffect(() => {
     getData();
   }, []);
 
   async function getData() {
-    const items = await getItems(); //funcion que llama la data al cargar el componente
-    setData(items);
+    const datos = await getItems();
+    setData(datos);
   }
+
 
   async function getAllItems() {
     //se hace el post y luego se llama la data para ir actualizando con cada actualizacion
@@ -79,8 +74,14 @@ const apiUrl = "http://localhost:3001/items"
     else {
       let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
       if (confirm(phrase) == true) {
-        postProducts(apiUrl,datos);
-        getData();
+        await postProducts(apiUrl,datos);
+       getData();
+      setName('');
+      setDescription('');
+      setPrice('');
+      setCategory('');
+      setLocation('');
+      setimgUrl('');
     }
       }
       }
@@ -93,6 +94,7 @@ const apiUrl = "http://localhost:3001/items"
   let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
   if (confirm(phrase));
    await delProducts(apiUrl+"/",id);
+   getData()
   } 
 
   function mostrarElementos() {
@@ -101,10 +103,12 @@ const apiUrl = "http://localhost:3001/items"
   }
 
   async function editarItems(id,NameEdit,Description,Category,locationEdit,PrecioEdit,imgEditada) {
-    
+    console.log(Description);
+    let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
     const apiEdit = `http://localhost:3001/items/${id}`
-    await put(apiEdit,NameEdit,Description,Category,locationEdit,PrecioEdit,imgEditada)
-     
+    if (confirm(phrase));
+    await put(apiEdit,NameEdit,Description,Category,locationEdit,PrecioEdit,imgEditada);
+     getData()
   }
 
   return (
