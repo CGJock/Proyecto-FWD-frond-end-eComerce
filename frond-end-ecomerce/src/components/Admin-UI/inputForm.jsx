@@ -35,7 +35,7 @@ const InputForm = ({
         onChange={handleInputChange}
       />
       <div>
-        <img className="imgPost" src={imgUrl} alt="Imagen" />
+        <img  className="imgPost" src={imgUrl} alt="Imagen" />
       </div>
 
       <input

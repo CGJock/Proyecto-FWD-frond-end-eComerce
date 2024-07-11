@@ -46,11 +46,11 @@ const apiUrl = "http://localhost:3001/items"
 
  
 useEffect(() => {
-    getData();
+    getData();//use effect revisa constantemente el estado de la data
   }, []);
 
   async function getData() {
-    const datos = await getItems();
+    const datos = await getItems();//se llama la data constantemente
     setData(datos);
   }
 
@@ -74,7 +74,7 @@ useEffect(() => {
     else {
       let phrase = 'Presiona ok para aceptar\nOk para aceptar o Cancelar.';
       if (confirm(phrase) == true) {
-        await postProducts(apiUrl,datos);
+        await postProducts(apiUrl,datos);//se hace el post y se vacian los valores
        getData();
       setName('');
       setDescription('');
@@ -86,7 +86,7 @@ useEffect(() => {
       }
       }
   const handleInputChange = (event) => {
-    setimgUrl(event.target.value);
+    setimgUrl(event.target.value);//funcion que hace un preview de la tabla del admin
   };
 
 
@@ -98,7 +98,7 @@ useEffect(() => {
   } 
 
   function mostrarElementos() {
-     setShow(true);
+     setShow(true);//al clickar el boton editar se muestra el modal
      
   }
 
@@ -109,6 +109,8 @@ useEffect(() => {
     if (confirm(phrase));
     await put(apiEdit,NameEdit,Description,Category,locationEdit,PrecioEdit,imgEditada);
      getData()
+     
+     
   }
 
   return (

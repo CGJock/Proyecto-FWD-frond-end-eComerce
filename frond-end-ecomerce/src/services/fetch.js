@@ -57,56 +57,8 @@ const postTask = async (User,Mail,Password) => {
            } 
       }
     
-      const putTask = async(id,estadoTarea) => {
-        try {
-          const response = await fetch(apiUrl + id, {
-           method: 'PUT',
-           headers: {
-             'Content-Type': 'application/json'
-             },
-             body: JSON.stringify({
-    
-               
-               estado: estadoTarea
-          
-              })
-              
-           });
-           const data = await response.json()
-           window.location.reload()
-           console.log(data);
-           
-           
-         } catch(error) {
+      
     
     
-            console.log(error)
-           } 
-      }
-      const updateTask = async (id,inputEdit) => {
-        try {
-              const response = await fetch(apiUrl+ id, {
-               method: 'PUT',
-               headers: {
-                 'Content-Type': 'application/json'
-                 },
-                 body: JSON.stringify({
-        
-                   tarea: inputEdit,
-                   
-              
-                  })
-               });
-               const data = await response.json()
-               
-              window.location.reload()
-               
-             } catch(error) {
-        
-        
-                alert("error")
-               } 
-          }
-    
-      export {postTask,getTask,delTask,putTask,updateTask}
+      export {postTask,getTask,delTask}
        

@@ -33,8 +33,110 @@
     {
       "id": "3d39",
       "user": "ADMIN",
-      "password": "@admin.com",
-      "mail": "1234"
+      "password": "1234",
+      "mail": "@admin.com"
+    },
+    {
+      "id": "81ec",
+      "user": "chunche",
+      "password": "1234",
+      "mail": "chunche@mail.com"
+    },
+    {
+      "id": "e08d",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "4e75",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "9e15",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "0a95",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "1e60",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "7448",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "6fb4",
+      "user": "1",
+      "password": "1234",
+      "mail": "1@mail.com"
+    },
+    {
+      "id": "882c",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "cbbf",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "65af",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "ec49",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "437a",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "1526",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "eb0f",
+      "user": "3",
+      "password": "1234",
+      "mail": "3@mail.com"
+    },
+    {
+      "id": "6693",
+      "user": "gatito",
+      "password": "1234",
+      "mail": "gatito@mail.com"
+    },
+    {
+      "id": "cfb9",
+      "user": "usuario10",
+      "password": "1234",
+      "mail": "usuario10@mail.com"
     }
   ],
   "items": [
@@ -46,15 +148,6 @@
       "Location": "guanacaste",
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWgnBa_cJ58pLwhIY-fDWsXLhkN2lzCt5WQ&s",
       "id": "1293"
-    },
-    {
-      "id": "1362",
-      "Name": "Vestido de Bodas",
-      "Description": "Se vende por divorcio",
-      "Price": 23000,
-      "Category": "vestimenta",
-      "Location": "sanjose",
-      "imgUrl": "https://i.ebayimg.com/thumbs/images/g/aXIAAOSwWD9lrQyz/s-l640.jpg"
     },
     {
       "id": "d7f9",

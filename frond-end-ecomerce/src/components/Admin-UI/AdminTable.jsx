@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import ModalAdmin from "../Admin-UI/Modal";
+import '../../styles/table.css'
 
 const AdminTable = ({
   Data,
@@ -83,7 +84,7 @@ const AdminTable = ({
                 />
               </td>
               <td>
-                <button
+                <button className="editarBtn"
                   onClick={() => {
                     setShow(!show);
                     console.log(producto);
@@ -95,7 +96,7 @@ const AdminTable = ({
                 </button>
               </td>
               <td>
-                <button onClick={() => delItems(producto.id)}>Eliminar</button>
+                <button className="eliminarBtn" onClick={() => delItems(producto.id)}>Eliminar</button>
                 {/* Se llama una funcion de callback si se llama de manera normal, sera el resultado de la 
                 funcion y se enciclara /> */}
               </td>

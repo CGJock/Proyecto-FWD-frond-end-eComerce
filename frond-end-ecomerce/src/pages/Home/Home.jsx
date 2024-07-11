@@ -17,6 +17,7 @@ function Home() {
  const [puntoVenta, setPuntoVenta] = useState("");
  const [BusquedaXNombre,setBusquedaXNombre] = useState("");
  const inputKey = useRef();//para operacones logicas que no tienen que ver con render mejor useref
+ 
 
  useEffect(
   () => {//se ven los cambios de la data al filtrar el componente
@@ -46,7 +47,7 @@ const filtroIncludes = data.filter((element) => element.Name.toLowerCase().inclu
     setdataFiltrada(filtroIncludes)//si hay datos que cumplen la condicion filtro includes sera la nueva data
     
   } else{
-    console.log("ni idea que pasa")
+   console.log("ni idea que pasa")
   }
 }
   return (
@@ -58,7 +59,10 @@ const filtroIncludes = data.filter((element) => element.Name.toLowerCase().inclu
     <div style={{display:"flex"}}>
     <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
      puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
+    {dataFiltrada.length > 0 ? (     
     <CardProducts dataFiltrada={dataFiltrada}/>
+      ) : (<p>No hay coincidencias</p>)}
+       {/*se valida que la data sea mayor a 0 para mostrar los datos*/}
     </div>
     <Footer />
     </>
