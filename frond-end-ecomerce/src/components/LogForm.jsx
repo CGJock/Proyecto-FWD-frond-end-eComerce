@@ -20,7 +20,7 @@ const LoginForm = () => {
         datos.forEach((e)=> {
         User === e.user && Password === e.password && Password === e.password ?  usuarioEncontrado = true : usuarioEncontrado = false 
         localStorage.setItem("user", JSON.stringify(e.user))
-          // Navigate('/',{replace : true} )*no te necesito pero te dejo ahi por si acaso
+        
         });
         if (User === "ADMIN") {
           navigate("/Administration")

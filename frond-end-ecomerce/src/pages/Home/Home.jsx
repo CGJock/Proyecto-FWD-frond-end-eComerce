@@ -3,6 +3,7 @@ import AlignmentExample from '../../components/nav'
 import CardProducts from '../../components/HomeCards'
 import Asside from "../../components/Asside"
 import SearchBarPrincipal from '../../components/SearchBarPrincipal';
+import Footer from '../../components/Footer';
 import { useState, useEffect, useRef } from 'react';
 import { getItems } from '../../services/getProducts';
 
@@ -59,6 +60,7 @@ const filtroIncludes = data.filter((element) => element.Name.toLowerCase().inclu
      puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
     <CardProducts dataFiltrada={dataFiltrada}/>
     </div>
+    <Footer />
     </>
   )
 }

@@ -4,13 +4,14 @@
     flex-direction: column;
     justify-content: space-around;
     height: 400px;
-    width: 240px;
+    width: 500px;
     margin-left: 2%;
     border: 1px solid #E53935;
     border-radius: 10px;
     padding-right: 15px;
     padding-left: 15px;
     background-color: white;
+    margin-right: 40px;
 }
 .asside-busqueda select{
     height: 50px;
