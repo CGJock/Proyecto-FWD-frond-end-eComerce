@@ -6,7 +6,7 @@
     height: 400px;
     width: 500px;
     margin-left: 2%;
-    border: 1px solid #E53935;
+    border: 1px solid #DA0A22;;
     border-radius: 10px;
     padding-right: 15px;
     padding-left: 15px;
@@ -17,11 +17,11 @@
     height: 50px;
     color: white;
     text-align: center;
-    background-color: #E53935;
+    background-color: #DA0A22;;
     border-radius: 5px;
     border:none;
     appearance: none;
-    background: #E53935 url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background: #DA0A22 url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
     background-size: 18px 18px;
 }
 .asside-busqueda select option{
@@ -35,7 +35,7 @@
     height: 40px;
     width: 120px;
     background-color: transparent;
-    border: solid 2px  #E53935;
+    border: solid 2px  #DA0A22;
     border-radius: 8px;
     transition: 0.25s ease-in-out;
     margin-left: 19.5%;
@@ -44,7 +44,7 @@
 .assideButton:hover{
     height: 40px;
     width: 120px;
-    background-color: #E53935;
+    background-color: #DA0A22;
     border: none;
     border-radius: 8px;
     margin-top: 15px;

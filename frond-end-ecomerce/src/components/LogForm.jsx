@@ -1,13 +1,12 @@
 import { useState } from "react"
 import { getTask } from "../services/get";
 import {  useNavigate } from "react-router-dom";
-
+import logocuadrado from '../assets/logocuadrado.png'
+import '../styles/login.css'
 
 
 const LoginForm = () => {
-  // const {data, updateData} = useTheContext()
 
-  // updateData(data + 1)
     const navigate = useNavigate()
     const [User, setUser] = useState("");//se dejan vacios por que es el dato que trae el input
     const [Password, setPassword] = useState("");
@@ -32,11 +31,14 @@ const LoginForm = () => {
       }
       return (
         <>
-           <h1>login page</h1>
-            <input value={User} onChange={(event) => setUser(event.target.value.trim())} id='User' type='text' placeholder='usuario'></input>
-            <input value={Mail} onChange={(event) => setMail(event.target.value.trim())} id='Mail' type='text' placeholder='Correo Electronico'></input>
-            <input value={Password} onChange={(event) => setPassword(event.target.value.trim())} id='Password' type='text' placeholder='Password'></input>
-            <button onClick={logear}>logearse</button>
+        <img className="logo" src={logocuadrado} alt="" />
+          <div className="logContenedor">
+           <h5>Por favor Ingresa tu correo y Contraseña</h5>
+            <input  className="logInput" value={User} onChange={(event) => setUser(event.target.value.trim())} id='User' type='text' placeholder='usuario'></input>
+            <input  className="logInput" value={Mail} onChange={(event) => setMail(event.target.value.trim())} id='Mail' type='text' placeholder='Correo Electronico'></input>
+            <input  className="logInput" value={Password} onChange={(event) => setPassword(event.target.value.trim())} id='Password' type='text' placeholder='Password'></input>
+            <button  className="loginBtn" onClick={logear}>Inicio Sesion</button>
+            </div>
         </>
       )
     }

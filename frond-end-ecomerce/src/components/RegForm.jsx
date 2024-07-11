@@ -11,32 +11,32 @@ const Registform = () => {
     const [MailValidation, setMailValidation] = useState("");
     const [Password, setPassword] = useState("");
     const [PasswordValidation, setPasswordValidation] = useState("");
-    const [ProfileExists, setProfileExists] = useState("");
-    const ReservedUsers = ['ADMIN' ,'ADMINISTRATOR','ADMINISTRATION'];
+    const [ProfileExists, setProfileExists] = useState("");//flag para identificar si se encontro un usuarion en la base de datos
+    const ReservedUsers = ['ADMIN' ,'ADMINISTRATOR','ADMINISTRATION'];//usuarios reservados solo para admins no se permit usuarios regulares con ese username
     async function HandleForm() {
          event.preventDefault()
-         for (let i = 0; i < ReservedUsers.length; i++) {
+         for (let i = 0; i < ReservedUsers.length; i++) {//funcion que revisa si se ingreso un usuario reservado
             if (User.toUpperCase() === ReservedUsers[i]) {
                return alert("Nombre de usuario no disponible")
             }
             
          }
          if (!User || !Mail || !MailValidation || !Password || !PasswordValidation) {
-            return alert("rellena los espacios")
+            return alert("rellena los espacios")//verificacion  si los input vienen vacios
         } else if (Mail != MailValidation || Password != PasswordValidation) {
-            return alert("los datos no coinciden")
+            return alert("los datos no coinciden")//verificacion que mail, y contra sean iguales
         }
          let data = await getTask();
         for (const i in data) {
             if (Mail === data[i].mail || User === data[i].user){
                 setProfileExists(true)
-                console.log(ProfileExists)
+                //se valida si el perfil esta registrado
             }else {
                 setProfileExists(false)
-                console.log(ProfileExists)
+                
             }
         }
-     if(ProfileExists === false){
+     if(ProfileExists === false){//si el perfil no existia previamente se registra y redirecciona a la pagina del login
                 postTask(User,Mail,Password)//se agregan los parametros al post
                 navigate("/Login")
             } else if (ProfileExists === true) {
