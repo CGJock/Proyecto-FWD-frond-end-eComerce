@@ -3,6 +3,7 @@ import AlignmentExample from '../../components/nav'
 import CardProducts from '../../components/HomeCards'
 import Asside from "../../components/Asside"
 import SearchBarPrincipal from '../../components/SearchBarPrincipal';
+import Footer from '../../components/Footer';
 import { useState, useEffect, useRef } from 'react';
 import { getItems } from '../../services/getProducts';
 
@@ -53,12 +54,13 @@ const filtroIncludes = data.filter((element) => element.Name.toLowerCase().inclu
    
     <AlignmentExample dataFiltrada={dataFiltrada}/>
     <SearchBarPrincipal inputRef={inputKey} dataFiltrada={dataFiltrada} BusquedaXNombre={BusquedaXNombre} setBusquedaXNombre={setBusquedaXNombre}
-    filtroxNombre={filtroxNombre}/>
+    filtroxNombre={filtroxNombre} />
     <div style={{display:"flex"}}>
     <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
      puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
     <CardProducts dataFiltrada={dataFiltrada}/>
     </div>
+    <Footer />
     </>
   )
 }

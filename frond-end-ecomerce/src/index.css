@@ -39,11 +39,12 @@
 }
 .botones{
   background-color: #E53935 ;
+  color: red;
   border-radius: 0;
   border-left: solid rgb(30, 30, 30) 0.5px;
   border-right: solid rgb(30, 30, 30) 0.5px;
 }
-.botones  :hover{
+.botones:hover{
   background-color: black ;
   color: white;
   border-radius: 0;

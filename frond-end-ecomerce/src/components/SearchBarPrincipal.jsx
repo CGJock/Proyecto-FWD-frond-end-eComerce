@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import '../styles/searchbar.css'
-
+//se utilizo input ref para poder traer el valor del input en tiemporeal 
 const SearchBarPrincipal = ({filtroxNombre, inputRef}) => {
   return (
     <>

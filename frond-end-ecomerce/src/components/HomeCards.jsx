@@ -1,24 +1,18 @@
 import Card from "react-bootstrap/Card";
+import Row  from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
+
 
 
 const CardsProducts = ({dataFiltrada}) => {
 
   return (
-    <>
-      <div
-        style={{
-          display: "grid",
-          height: "500px",
-          gridTemplateColumns: "200px 200px 200px",
-          rowGap:"30px",
-          columnGap: "60px",
-          marginLeft: "60px",
-        }}
-        //cambiar esto no le gusta a barry
-      >
+    
+      <Row xs={1} md={3}  className="g-4">
         {dataFiltrada.map((item) => (
-          <Card key={item.id} style={{ width: "250px", height:"480px"}}>
+          <Col key={item.id}>
+          <Card  key={item.id} style={{ width: "250px", height:"480px"}}>
             <Card.Img variant="top" src={item.imgUrl} style={{height:"180px",width:"246px",objectFit:"contain"}} />
             <Card.Body>
               <Card.Title style={{height:"30px"}}>{item.Name}</Card.Title>
@@ -36,9 +30,10 @@ const CardsProducts = ({dataFiltrada}) => {
               <Card.Link href="#">Another Link</Card.Link>
             </Card.Body>
           </Card>
+          </Col>
         ))}
-      </div>
-    </>
+      </Row>
+    
   );
 }
 

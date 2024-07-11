@@ -1,6 +1,7 @@
 import '../styles/asside.css'
 
-const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVenta,setPuntoVenta,getAllItems}) => {
+
+const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVenta,setPuntoVenta,getAllItems,}) => {
   let Electrodomesticos = "electrodomesticos";
   let Herramientas = "herramientas";
   let Muebles = "muebles";
@@ -37,6 +38,7 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
         <option value={Juguetes}>Juguetes</option>
         <option value={Libros}>Libros</option>
       </select>
+      
 
       <h6>Selecciona un punto de venta</h6>
       <select
@@ -54,12 +56,12 @@ const Asside = ({Seleccionado,setSeleccionado,Price,setPrice,PriceSlider,PuntoVe
         <option value={Puntarenas}>Puntarenas</option>
       </select>
       
-      <label htmlFor="price">Precio Maximo: </label>
+      <label htmlFor="price"><h6>Precio Maximo:</h6> </label>
      
-      <input type="range" min={0} max={500000} step={5000} value={Price} onChange={PriceSlider}/>
+      <input className="slider" type="range" min={0} max={500000} step={5000} value={Price} onChange={PriceSlider}/>
 
-      <p>Monto:{Price}</p>
-      <button onClick={getAllItems}>Busqueda</button>
+      <h6>Monto: {Price}</h6>
+      <button className="assideButton" onClick={getAllItems}>Busqueda</button>
       </div>
     </>
   );
