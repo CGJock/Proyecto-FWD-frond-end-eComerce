@@ -1,13 +1,11 @@
 
 import AlignmentExample from '../../components/nav'
-import CardProducts from '../../components/HomeCards'
 import Asside from "../../components/Asside"
 import SearchBarPrincipal from '../../components/SearchBarPrincipal';
 import Footer from '../../components/Footer';
 import { useState, useEffect, useRef } from 'react';
 import { getItems } from '../../services/getProducts';
-
-
+import ProductsContainer from '../../components/ProductsContainer';
 
 
 function Home() {
@@ -50,6 +48,8 @@ const filtroIncludes = data.filter((element) => element.Name.toLowerCase().inclu
    console.log("ni idea que pasa")
   }
 }
+
+
   return (
     <>
    
@@ -59,10 +59,7 @@ const filtroIncludes = data.filter((element) => element.Name.toLowerCase().inclu
     <div style={{display:"flex"}}>
     <Asside Seleccionado={Seleccionado}setSeleccionado={setSeleccionado} Price={Price} setPrice={setPrice} PriceSlider={PriceSlider}
      puntoVenta={puntoVenta} setPuntoVenta={setPuntoVenta} getAllItems={getAllItems}/>
-    {dataFiltrada.length > 0 ? (     
-    <CardProducts dataFiltrada={dataFiltrada}/>
-      ) : (<p>No hay coincidencias</p>)}
-       {/*se valida que la data sea mayor a 0 para mostrar los datos*/}
+     <ProductsContainer dataFiltrada={dataFiltrada}/>
     </div>
     <Footer />
     </>

@@ -66,11 +66,11 @@ const Registform = () => {
         </label>
         
         <label>Ingrese su Contraseña <br />
-        <input className='regInput' value={Password} onChange={(event) => setPassword(event.target.value.trim())} id='Password' type='text' placeholder='Contraseña'></input>
+        <input  className='regInput' value={Password} onChange={(event) => setPassword(event.target.value.trim())} id='Password' type='password' placeholder='Contraseña'></input>
         </label>
         
         <label>Ingrese nuevamente su Contraseña <br />
-        <input className='regInput' value={PasswordValidation} onChange={(event) => setPasswordValidation(event.target.value.trim())} id='Password' type='text' placeholder='Confirme su Contraseña'></input>
+        <input className='regInput' value={PasswordValidation} onChange={(event) => setPasswordValidation(event.target.value.trim())} id='Password' type='password' placeholder='Confirme su Contraseña'></input>
         </label>
         
         <input className='regBtn' type="submit" />
