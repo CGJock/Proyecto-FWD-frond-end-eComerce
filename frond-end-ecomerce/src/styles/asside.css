@@ -5,6 +5,7 @@
     justify-content: space-around;
     height: 400px;
     width: 500px;
+    max-width: 250px;
     margin-left: 2%;
     border: 1px solid #DA0A22;;
     border-radius: 10px;
